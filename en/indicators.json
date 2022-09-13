@@ -1,22 +1,6 @@
 [
   {
     "goal": {
-      "id": " 1",
-      "title": "global_goals. 1-title",
-      "indicators": [
-        
-        {
-          "id": " 1-2-2",
-          "title": "global_indicators. 1-2-2-title",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/ 1-2-2",
-          "status": "complete"
-        }]
-    }
-  },
-  {
-    "goal": {
       "id": "1",
       "title": "End poverty in all its forms everywhere",
       "indicators": [
