@@ -7,11 +7,11 @@
         
         {
           "id": "1-1-1",
-          "title": "global_indicators.1-2-3-title",
+          "title": "Proportion of the population living below the international poverty line by sex, age, employment status and geographic location (urban/rural)",
           "description": "",
           "keywords": "",
           "href": "/sdg-enz-staging-site/en/1-1-1",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "1-2-1",
@@ -27,7 +27,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-enz-staging-site/en/1-2-3",
-          "status": "complete"
+          "status": "notstarted"
         },
         {
           "id": "1-3-1",
