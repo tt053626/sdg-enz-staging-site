@@ -136,7 +136,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20220913111353">
+        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20220913124156">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -534,13 +534,13 @@ The data comes from the Treptow-Köpenick register. Registers are documentations
      id="indicatorData"
      data-indicatorid='indicator_16-3-1'
      data-id="16-3-1"
-     data-country="Treptow-Köpenick"
-     data-charttitle="Number of right-wing extremist and discriminatory incidents in Treptow Köpenick"
+     data-country="Enzkreis"
+     data-charttitle="Voter turnout"
      data-charttitles="null"
      data-measurementunit="Absolute numbers"
      data-xaxislabel=""
      data-showdata="true"
-     data-graphtype="bar"
+     data-graphtype="line"
      data-geocoderegex=""
      data-showmap=""
      data-startvalues="[{&quot;field&quot;:&quot;Type of incident&quot;,&quot;value&quot;:&quot;Total&quot;}]"
@@ -550,7 +550,7 @@ The data comes from the Treptow-Köpenick register. Registers are documentations
      data-graphtargetlines="null"
      data-graphseriesbreaks="null"
      data-indicatordownloads="null"
-     data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Value&quot;},{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;data.incident&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;,&quot;Ableism&quot;,&quot;Anti-Semitism&quot;,&quot;Political opponents&quot;,&quot;LGBTIQ* hostility&quot;,&quot;Racism&quot;,&quot;Right-wing and extreme right-wing self-portrayal&quot;,&quot;Social-chauvinism&quot;,&quot;Total&quot;,&quot;NS trivialization and glorification&quot;,&quot;Campaign&quot;]},&quot;title&quot;:&quot;Type of incident&quot;}]}"
+     data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;},{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;}]}"
      data-compositebreakdownlabel=""
      data-precision="null"
 >
@@ -584,11 +584,79 @@ The data comes from the Treptow-Köpenick register. Registers are documentations
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Number of right-wing extremist and discriminatory incidents in Treptow Köpenick</caption>
+      <caption>Voter turnout</caption>
       <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col" class="table-value">Value</th>
+        
         
       </thead>
       <tbody>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td class="table-value">60.54</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td class="table-value">50.36</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2009</td>
+          
+          
+          
+          <td class="table-value">51.37</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2004</td>
+          
+          
+          
+          <td class="table-value">52.25</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>1999</td>
+          
+          
+          
+          <td class="table-value">53.63</td>
+          
+          
+        </tr>
         
       </tbody>
     </table>
@@ -596,10 +664,10 @@ The data comes from the Treptow-Köpenick register. Registers are documentations
 
   <div id="datatableFooter">
     
-    <p>Source: Register zur Erfassung rechtsextremer und diskriminierender Vorfälle in Berlin, Treptow-Köpenick</p>
+    <p>Source: XX</p>
     
     
-    <p>Geographical Area: Treptow-Köpenick</p>
+    <p>Geographical Area: Enzkreis</p>
     
     
     <p>Unit of Measurement: Absolute numbers</p>
@@ -649,7 +717,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Number of right-wing extremist and discriminatory incidents in Treptow Köpenick</h4>
+          <h4 id="chart-heading" class="chart-title">Voter turnout</h4>
           <div id="chart" class="plot-container">
             
 <canvas
@@ -853,32 +921,39 @@ opensdg.chartConfigAlter(function(config, info) {
 </script>
 
 <script>
+// For line charts, add the vertical line hover functionality.
 opensdg.chartConfigAlter(function(config, info) {
-  if (info.stackedDisaggregation) {
     var overrides = {
-      options: {
-        scales: {
-          xAxes: [{ stacked: true }],
-          yAxes: [{ stacked: true }],
-        }
-      }
+        options: {
+            tooltips: {
+                intersect: false,
+                axis: 'x'
+            },
+        },
+        plugins: [{
+            beforeDatasetsDraw: function(chart) {
+                if (chart.tooltip._active && chart.tooltip._active.length) {
+                    var activePoint = chart.tooltip._active[0],
+                        ctx = chart.ctx,
+                        x = activePoint.tooltipPosition().x,
+                        topY = chart.scales['y-axis-0'].top,
+                        bottomY = chart.scales['y-axis-0'].bottom;
+
+                    // draw line
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.moveTo(x, topY);
+                    ctx.lineTo(x, bottomY);
+                    ctx.lineWidth = 2;
+                    ctx.strokeStyle = '#757575';
+                    ctx.stroke();
+                    ctx.restore();
+                }
+            }
+        }],
     };
-    // If we have stackedDisaggregation, we need to group datasets into stacks.
-    config.data.datasets.forEach(function(dataset) {
-      var disaggregation = $.extend({}, dataset.disaggregation);
-      // We're going to "stringify" each combination of disaggregations in order
-      // to place them in their own "stacks". To place "stacked" disaggregations
-      // into the same stack, we set them as "samestack" before stringifying.
-      // Note that the string "samestack" is completely arbitrary.
-      if (typeof disaggregation[info.stackedDisaggregation] !== 'undefined') {
-        disaggregation[info.stackedDisaggregation] = 'samestack';
-      }
-      // Use the disaggregation as a unique id for each stack.
-      dataset.stack = JSON.stringify(disaggregation);
-    });
     // Add these overrides onto the normal config, and return it.
     $.extend(true, config, overrides);
-  }
 });
 </script>
 
@@ -893,12 +968,12 @@ opensdg.chartConfigAlter(function(config, info) {
     <dl>
         
         <dt>Source:</dt>
-        <dd>Register zur Erfassung rechtsextremer und diskriminierender Vorfälle in Berlin, Treptow-Köpenick</dd>
+        <dd>XX</dd>
         
 
         
         <dt>Geographical Area:</dt>
-        <dd>Treptow-Köpenick</dd>
+        <dd>Enzkreis</dd>
         
 
         
@@ -939,12 +1014,12 @@ opensdg.chartConfigAlter(function(config, info) {
     <dl>
         
         <dt>Source:</dt>
-        <dd>Register zur Erfassung rechtsextremer und diskriminierender Vorfälle in Berlin, Treptow-Köpenick</dd>
+        <dd>XX</dd>
         
 
         
         <dt>Geographical Area:</dt>
-        <dd>Treptow-Köpenick</dd>
+        <dd>Enzkreis</dd>
         
 
         
@@ -1051,7 +1126,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Geographical coverage </th>
         <td>
           
-            <p>Treptow-Köpenick</p>
+            <p>Enzkreis</p>
 
           
         </td>
@@ -1169,8 +1244,8 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/d7ea3e2f92c8e6631528e918a3acdc46f1ed7820" target="_blank">
-                2021-07-17: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/6f13cc4b32f759e82a091bc59b0b9dac9b856fb7" target="_blank">
+                2022-09-13: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -1196,8 +1271,8 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/f1757ee386323e8fd99ad67861b93603b9ae45c6" target="_blank">
-                2021-07-17: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/fd01bba2bbb4cc033ec0e8207e5d4d3c7a4d7ab5" target="_blank">
+                2022-09-13: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -1349,7 +1424,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Geographical coverage </th>
         <td>
           
-            <p>Treptow-Köpenick</p>
+            <p>Enzkreis</p>
 
           
         </td>
@@ -1467,8 +1542,8 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/d7ea3e2f92c8e6631528e918a3acdc46f1ed7820" target="_blank">
-                2021-07-17: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/6f13cc4b32f759e82a091bc59b0b9dac9b856fb7" target="_blank">
+                2022-09-13: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -1494,8 +1569,8 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/f1757ee386323e8fd99ad67861b93603b9ae45c6" target="_blank">
-                2021-07-17: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/fd01bba2bbb4cc033ec0e8207e5d4d3c7a4d7ab5" target="_blank">
+                2022-09-13: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -1779,7 +1854,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Organisation </th>
         <td>
           
-            <p>Register zur Erfassung rechtsextremer und diskriminierender Vorfälle in Berlin, Treptow-Köpenick</p>
+            <p>XX</p>
 
           
         </td>
@@ -1840,10 +1915,6 @@ data-event-label="Change to Sources tab"
             
             
 
-            
-              <a href="https://berliner-register.de/treptow-koepenick" target="_blank">
-                https://berliner-register.de/treptow-koepenick <span class="visuallyhidden">opens in a new window</span>
-              </a>
             
 
           
@@ -2395,12 +2466,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20220913111353'></script>
+<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20220913124156'></script>
 
 
     
     
-    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20220913111353"></script><script>
+    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20220913124156"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
