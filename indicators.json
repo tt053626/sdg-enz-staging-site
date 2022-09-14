@@ -7,7 +7,7 @@
         
         {
           "id": "1-1-1",
-          "title": "Anzahl der Personen die das Sozialhilfeportal nutzen",
+          "title": "ArmutSGB-II / SGB-XII-Quote",
           "description": "",
           "keywords": "",
           "href": "/sdg-enz-staging-site/1-1-1",
@@ -15,7 +15,7 @@
         },
         {
           "id": "1-2-1",
-          "title": "Anzahl der Repaircafes, Gemeinschaftswerkstätten und ReUse Shops in Treptow-Köpenick",
+          "title": "Armut bei Kindern (< 15 Jahre; Bedarfsgemeinschaften)",
           "description": "",
           "keywords": "",
           "href": "/sdg-enz-staging-site/1-2-1",
@@ -735,7 +735,7 @@
         },
         {
           "id": "16-3-1",
-          "title": "Anzahl der rassistisch, antisemitisch, homophob und rechtsextrem geprägter Vorfälle pro Jahr in Treptow-Köpenick",
+          "title": "Wahlbeteiligung bei Kommunalwahlen",
           "description": "",
           "keywords": "",
           "href": "/sdg-enz-staging-site/16-3-1",
