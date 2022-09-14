@@ -276,30 +276,6 @@
           "keywords": "",
           "href": "/sdg-enz-staging-site/en/5-2-1",
           "status": "complete"
-        },
-        {
-          "id": "5-3-1",
-          "title": "Proportion of women aged 20–24 years who were married or in a union before age 15 and before age 18",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/5-3-1",
-          "status": "complete"
-        },
-        {
-          "id": "5-4-1",
-          "title": "Proportion of time spent on unpaid domestic and care work, by sex, age and location",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/5-4-1",
-          "status": "complete"
-        },
-        {
-          "id": "5-5-1",
-          "title": "Proportion of seats held by women in (a) national parliaments and (b) local governments",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/5-5-1",
-          "status": "complete"
         }]
     }
   },
@@ -315,22 +291,6 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-enz-staging-site/en/6-1-1",
-          "status": "complete"
-        },
-        {
-          "id": "6-2-1",
-          "title": "Proportion of population using (a) safely managed sanitation services and (b) a hand-washing facility with soap and water",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/6-2-1",
-          "status": "complete"
-        },
-        {
-          "id": "6-3-1",
-          "title": "Proportion of domestic and industrial wastewater flows safely treated",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/6-3-1",
           "status": "complete"
         }]
     }
@@ -387,30 +347,6 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-enz-staging-site/en/7-2-3",
-          "status": "complete"
-        },
-        {
-          "id": "7-3-1",
-          "title": "Energy intensity measured in terms of primary energy and GDP",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/7-3-1",
-          "status": "complete"
-        },
-        {
-          "id": "7-3-2",
-          "title": "global_indicators.7-3-2-title",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/7-3-2",
-          "status": "complete"
-        },
-        {
-          "id": "7-3-3",
-          "title": "global_indicators.7-3-3-title",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/7-3-3",
           "status": "complete"
         }]
     }
@@ -518,14 +454,6 @@
           "status": "complete"
         },
         {
-          "id": "9-1-2",
-          "title": "Passenger and freight volumes, by mode of transport",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/9-1-2",
-          "status": "complete"
-        },
-        {
           "id": "9-2-1",
           "title": "Number of public facilities with free WLAN access",
           "description": "",
@@ -604,46 +532,6 @@
           "keywords": "",
           "href": "/sdg-enz-staging-site/en/10-5-1",
           "status": "complete"
-        },
-        {
-          "id": "10-6-1",
-          "title": "Proportion of members and voting rights of developing countries in international organizations",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/10-6-1",
-          "status": "complete"
-        },
-        {
-          "id": "10-7-1",
-          "title": "Recruitment cost borne by employee as a proportion of monthly income earned in country of destination",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/10-7-1",
-          "status": "complete"
-        },
-        {
-          "id": "10-7-2",
-          "title": "Number of countries with migration policies that facilitate orderly, safe, regular and responsible migration and mobility of people",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/10-7-2",
-          "status": "complete"
-        },
-        {
-          "id": "10-7-3",
-          "title": "Number of people who died or disappeared in the process of migration towards an international destination",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/10-7-3",
-          "status": "complete"
-        },
-        {
-          "id": "10-8-1",
-          "title": "global_indicators.10-8-1-title",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/10-8-1",
-          "status": "complete"
         }]
     }
   },
@@ -662,35 +550,11 @@
           "status": "complete"
         },
         {
-          "id": "11-1-2",
-          "title": "global_indicators.11-1-2-title",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/11-1-2",
-          "status": "complete"
-        },
-        {
           "id": "11-2-1",
           "title": "Number of pick-up points for community-supported agriculture (CSA) products",
           "description": "",
           "keywords": "",
           "href": "/sdg-enz-staging-site/en/11-2-1",
-          "status": "complete"
-        },
-        {
-          "id": "11-2-2",
-          "title": "global_indicators.11-2-2-title",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/11-2-2",
-          "status": "complete"
-        },
-        {
-          "id": "11-2-3",
-          "title": "global_indicators.11-2-3-title",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/11-2-3",
           "status": "complete"
         },
         {
@@ -718,11 +582,43 @@
           "status": "complete"
         },
         {
-          "id": "11-5-2",
-          "title": "Direct economic loss in relation to global GDP, damage to critical infrastructure and number of disruptions to basic services, attributed to disasters",
+          "id": "11-6-1",
+          "title": "Verunglückte im Straßenverkehr",
           "description": "",
           "keywords": "",
-          "href": "/sdg-enz-staging-site/en/11-5-2",
+          "href": "/sdg-enz-staging-site/en/11-6-1",
+          "status": "complete"
+        },
+        {
+          "id": "11-7-1",
+          "title": "Anteil Siedlungs- und Verkehrsfläche",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-enz-staging-site/en/11-7-1",
+          "status": "complete"
+        },
+        {
+          "id": "11-7-2",
+          "title": "Zuwachs gegenüber Vorjahr",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-enz-staging-site/en/11-7-2",
+          "status": "complete"
+        },
+        {
+          "id": "11-7-3",
+          "title": "Nutzungsintensität je EinwohnerInnen",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-enz-staging-site/en/11-7-3",
+          "status": "complete"
+        },
+        {
+          "id": "11-8-1",
+          "title": "Naherholungsfläche",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-enz-staging-site/en/11-8-1",
           "status": "complete"
         }]
     }
@@ -755,14 +651,6 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-enz-staging-site/en/12-2-1",
-          "status": "complete"
-        },
-        {
-          "id": "12-2-2",
-          "title": "Domestic material consumption, domestic material consumption per capita, and domestic material consumption per GDP",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/12-2-2",
           "status": "complete"
         },
         {
@@ -844,22 +732,6 @@
           "keywords": "",
           "href": "/sdg-enz-staging-site/en/13-2-2",
           "status": "complete"
-        },
-        {
-          "id": "13-2-3",
-          "title": "global_indicators.13-2-3-title",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/13-2-3",
-          "status": "complete"
-        },
-        {
-          "id": "13-3-1",
-          "title": "Extent to which (i) global citizenship education and (ii) education for sustainable development are mainstreamed in (a) national education policies; (b) curricula; (c) teacher education; and (d) student assessment",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/13-3-1",
-          "status": "complete"
         }]
     }
   },
@@ -876,22 +748,6 @@
           "keywords": "",
           "href": "/sdg-enz-staging-site/en/14-1-1",
           "status": "complete"
-        },
-        {
-          "id": "14-2-1",
-          "title": "Number of countries using ecosystem-based approaches to managing marine areas",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/14-2-1",
-          "status": "notstarted"
-        },
-        {
-          "id": "14-3-1",
-          "title": "Average marine acidity (pH) measured at agreed suite of representative sampling stations",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/14-3-1",
-          "status": "notstarted"
         }]
     }
   },
@@ -971,14 +827,6 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-enz-staging-site/en/16-3-1",
-          "status": "complete"
-        },
-        {
-          "id": "16-4-1",
-          "title": "Total value of inward and outward illicit financial flows (in current United States dollars)",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/en/16-4-1",
           "status": "complete"
         }]
     }
