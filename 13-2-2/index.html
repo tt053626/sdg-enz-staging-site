@@ -136,7 +136,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221027180710">
+        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221027204407">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -460,15 +460,6 @@ data-event-label="high"
 </div>
 
 
-<div class="row" id="page-content">
-    <div class="col-xs-12">
-        <p>Der Indikator zeigt die Anzahl der durch das ADFC-Projekt „fLotte“ kostenlos ausleihbaren Lastenräder im Bezirk Treptow-Köpenick. 
-Ein Teil der Lastenräder wird durch Bürger*/innen, Gewerbetreibende und andere Engagierte bereit gestellt. Ein anderer Teil wird durch das 
-Programm „fLotte kommunal“ mit Mitteln des Berliner Senats und der Bezirksämter finanziert.</p>
-
-    </div>
-</div>
-
 
     <style>
     section {
@@ -489,16 +480,16 @@ Programm „fLotte kommunal“ mit Mitteln des Berliner Senats und der Bezirksä
      id="indicatorData"
      data-indicatorid='indicator_13-2-2'
      data-id="13-2-2"
-     data-country="Treptow-Köpenick"
-     data-charttitle="Anzahl der kostenlos ausleihbaren Lastenräder"
+     data-country="Australia"
+     data-charttitle="Platzierung im European Energy Award – Vergleich BW, Bund"
      data-charttitles="null"
-     data-measurementunit="Anzahl der Lastenräder"
+     data-measurementunit=""
      data-xaxislabel=""
      data-showdata="true"
-     data-graphtype="bar"
+     data-graphtype="line"
      data-geocoderegex=""
      data-showmap=""
-     data-startvalues="[{&quot;field&quot;:&quot;fLotte&quot;,&quot;value&quot;:&quot;fLotte kommunal&quot;},{&quot;field&quot;:&quot;fLotte&quot;,&quot;value&quot;:&quot;fLotte nicht-kommunal&quot;},{&quot;field&quot;:&quot;fLotte&quot;,&quot;value&quot;:&quot;Gesamt&quot;}]"
+     data-startvalues="null"
      data-graphlimits="null"
      data-stackeddisaggregation=""
      data-graphannotations="null"
@@ -539,7 +530,7 @@ Programm „fLotte kommunal“ mit Mitteln des Berliner Senats und der Bezirksä
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Anzahl der kostenlos ausleihbaren Lastenräder</caption>
+      <caption>Platzierung im European Energy Award – Vergleich BW, Bund</caption>
       <thead>
         
       </thead>
@@ -551,13 +542,7 @@ Programm „fLotte kommunal“ mit Mitteln des Berliner Senats und der Bezirksä
 
   <div id="datatableFooter">
     
-    <p>Datenquelle: Allgemeiner Deutscher Fahrrad-Club Berlin e.V. - fLotte-Berlin</p>
     
-    
-    <p>Geographische Abdeckung: Treptow-Köpenick</p>
-    
-    
-    <p>Einheit: Anzahl der Lastenräder</p>
     
     
   </div>
@@ -604,7 +589,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Anzahl der kostenlos ausleihbaren Lastenräder</h4>
+          <h4 id="chart-heading" class="chart-title">Platzierung im European Energy Award – Vergleich BW, Bund</h4>
           <div id="chart" class="plot-container">
             
 <canvas
@@ -808,32 +793,39 @@ opensdg.chartConfigAlter(function(config, info) {
 </script>
 
 <script>
+// For line charts, add the vertical line hover functionality.
 opensdg.chartConfigAlter(function(config, info) {
-  if (info.stackedDisaggregation) {
     var overrides = {
-      options: {
-        scales: {
-          xAxes: [{ stacked: true }],
-          yAxes: [{ stacked: true }],
-        }
-      }
+        options: {
+            tooltips: {
+                intersect: false,
+                axis: 'x'
+            },
+        },
+        plugins: [{
+            beforeDatasetsDraw: function(chart) {
+                if (chart.tooltip._active && chart.tooltip._active.length) {
+                    var activePoint = chart.tooltip._active[0],
+                        ctx = chart.ctx,
+                        x = activePoint.tooltipPosition().x,
+                        topY = chart.scales['y-axis-0'].top,
+                        bottomY = chart.scales['y-axis-0'].bottom;
+
+                    // draw line
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.moveTo(x, topY);
+                    ctx.lineTo(x, bottomY);
+                    ctx.lineWidth = 2;
+                    ctx.strokeStyle = '#757575';
+                    ctx.stroke();
+                    ctx.restore();
+                }
+            }
+        }],
     };
-    // If we have stackedDisaggregation, we need to group datasets into stacks.
-    config.data.datasets.forEach(function(dataset) {
-      var disaggregation = $.extend({}, dataset.disaggregation);
-      // We're going to "stringify" each combination of disaggregations in order
-      // to place them in their own "stacks". To place "stacked" disaggregations
-      // into the same stack, we set them as "samestack" before stringifying.
-      // Note that the string "samestack" is completely arbitrary.
-      if (typeof disaggregation[info.stackedDisaggregation] !== 'undefined') {
-        disaggregation[info.stackedDisaggregation] = 'samestack';
-      }
-      // Use the disaggregation as a unique id for each stack.
-      dataset.stack = JSON.stringify(disaggregation);
-    });
     // Add these overrides onto the normal config, and return it.
     $.extend(true, config, overrides);
-  }
 });
 </script>
 
@@ -847,18 +839,9 @@ opensdg.chartConfigAlter(function(config, info) {
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Datenquelle:</dt>
-        <dd>Allgemeiner Deutscher Fahrrad-Club Berlin e.V. - fLotte-Berlin</dd>
-        
 
         
-        <dt>Geographische Abdeckung:</dt>
-        <dd>Treptow-Köpenick</dd>
-        
 
-        
-        <dt>Einheit:</dt>
-        <dd>Anzahl der Lastenräder</dd>
         
 
         
@@ -893,18 +876,9 @@ opensdg.chartConfigAlter(function(config, info) {
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Datenquelle:</dt>
-        <dd>Allgemeiner Deutscher Fahrrad-Club Berlin e.V. - fLotte-Berlin</dd>
-        
 
         
-        <dt>Geographische Abdeckung:</dt>
-        <dd>Treptow-Köpenick</dd>
-        
 
-        
-        <dt>Einheit:</dt>
-        <dd>Anzahl der Lastenräder</dd>
         
 
         
@@ -1006,7 +980,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Geographische Abdeckung </th>
         <td>
           
-            <p>Treptow-Köpenick</p>
+            
 
           
         </td>
@@ -1020,7 +994,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Einheit </th>
         <td>
           
-            <p>Anzahl der Lastenräder</p>
+            
 
           
         </td>
@@ -1124,10 +1098,6 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/fc4c1bf92d01256854e7b4923f9e13dec8ecd86a" target="_blank">
-                2021-07-17: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
-            
 
           
         </td>
@@ -1150,10 +1120,6 @@ data-event-label="Change to Sources tab"
             
             
 
-            
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/faa7631b34167d0d909dd12ba5b8af664634a917" target="_blank">
-                2021-07-17: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
             
 
           
@@ -1304,7 +1270,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Geographische Abdeckung </th>
         <td>
           
-            <p>Treptow-Köpenick</p>
+            
 
           
         </td>
@@ -1318,7 +1284,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Einheit </th>
         <td>
           
-            <p>Anzahl der Lastenräder</p>
+            
 
           
         </td>
@@ -1422,10 +1388,6 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/fc4c1bf92d01256854e7b4923f9e13dec8ecd86a" target="_blank">
-                2021-07-17: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
-            
 
           
         </td>
@@ -1448,10 +1410,6 @@ data-event-label="Change to Sources tab"
             
             
 
-            
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/faa7631b34167d0d909dd12ba5b8af664634a917" target="_blank">
-                2021-07-17: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
             
 
           
@@ -1574,7 +1532,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Indikatorennummerierung </th>
         <td>
           
-            <p>13.2.2</p>
+            
 
           
         </td>
@@ -1688,263 +1646,6 @@ data-event-label="Change to Sources tab"
 
 
 
-
-  <div class="row">
-  
-    
-    
-    <div class="col-md-6">
-      
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p>Allgemeiner Deutscher Fahrrad-Club Berlin e.V. - fLotte-Berlin</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Periodizität </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Daten verfügbar seit </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Geographische Abdeckung </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Link zur Datenquelle </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://flotte-berlin.de/lastenrad-ausleihen/standorte/bezirke/" target="_blank">
-                https://flotte-berlin.de/lastenrad-ausleihen/standorte/bezirke/ <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Veröffentlichungsdatum </th>
-        <td>
-          
-            
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Nächste Veröffentlichung am </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Statistische Klassifizierung </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Kontaktinformationen </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Weitere Informationen </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</table>
-
-    </div>
-    
-  </div>
 
 
 </div>
@@ -2352,12 +2053,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221027180710'></script>
+<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221027204407'></script>
 
 
     
     
-    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221027180710"></script><script>
+    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221027204407"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

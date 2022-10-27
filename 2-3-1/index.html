@@ -136,7 +136,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221027180710">
+        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221027204407">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -460,14 +460,6 @@ data-event-label="high"
 </div>
 
 
-<div class="row" id="page-content">
-    <div class="col-xs-12">
-        <p>Foodsharing ist eine 2012 entstandene Initiative gegen die Lebensmittelverschwendung, welche Lebensmittel rettet, die ansonsten weggeworfen werden. 
-Im Bezirk Treptow-Köpenick engagieren sich 1773 Personen als Foodsaver und es existieren aktive Kooperationen mit 29 Betrieben (Stand 01/2022). Der Indikator zeigt die Menge der Lebensmittel die bis heute im Bezirk Treptow-Köpenick gerettet wurden.</p>
-
-    </div>
-</div>
-
 
     <style>
     section {
@@ -488,13 +480,13 @@ Im Bezirk Treptow-Köpenick engagieren sich 1773 Personen als Foodsaver und es e
      id="indicatorData"
      data-indicatorid='indicator_2-3-1'
      data-id="2-3-1"
-     data-country="Treptow-Köpenick"
-     data-charttitle="Kilogramm gerettete Lebensmittel (akkumuliert)"
+     data-country="Australia"
+     data-charttitle="Stickstoffüberschuss"
      data-charttitles="null"
-     data-measurementunit="kg (akkumuliert)"
+     data-measurementunit=""
      data-xaxislabel=""
      data-showdata="true"
-     data-graphtype="bar"
+     data-graphtype="line"
      data-geocoderegex=""
      data-showmap=""
      data-startvalues="null"
@@ -538,7 +530,7 @@ Im Bezirk Treptow-Köpenick engagieren sich 1773 Personen als Foodsaver und es e
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Kilogramm gerettete Lebensmittel (akkumuliert)</caption>
+      <caption>Stickstoffüberschuss</caption>
       <thead>
         
         
@@ -570,13 +562,7 @@ Im Bezirk Treptow-Köpenick engagieren sich 1773 Personen als Foodsaver und es e
 
   <div id="datatableFooter">
     
-    <p>Datenquelle: Bezirksamt Treptow-Köpenick</p>
     
-    
-    <p>Geographische Abdeckung: Treptow-Köpenick</p>
-    
-    
-    <p>Einheit: kg (akkumuliert)</p>
     
     
   </div>
@@ -623,7 +609,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Kilogramm gerettete Lebensmittel (akkumuliert)</h4>
+          <h4 id="chart-heading" class="chart-title">Stickstoffüberschuss</h4>
           <div id="chart" class="plot-container">
             
 <canvas
@@ -827,32 +813,39 @@ opensdg.chartConfigAlter(function(config, info) {
 </script>
 
 <script>
+// For line charts, add the vertical line hover functionality.
 opensdg.chartConfigAlter(function(config, info) {
-  if (info.stackedDisaggregation) {
     var overrides = {
-      options: {
-        scales: {
-          xAxes: [{ stacked: true }],
-          yAxes: [{ stacked: true }],
-        }
-      }
+        options: {
+            tooltips: {
+                intersect: false,
+                axis: 'x'
+            },
+        },
+        plugins: [{
+            beforeDatasetsDraw: function(chart) {
+                if (chart.tooltip._active && chart.tooltip._active.length) {
+                    var activePoint = chart.tooltip._active[0],
+                        ctx = chart.ctx,
+                        x = activePoint.tooltipPosition().x,
+                        topY = chart.scales['y-axis-0'].top,
+                        bottomY = chart.scales['y-axis-0'].bottom;
+
+                    // draw line
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.moveTo(x, topY);
+                    ctx.lineTo(x, bottomY);
+                    ctx.lineWidth = 2;
+                    ctx.strokeStyle = '#757575';
+                    ctx.stroke();
+                    ctx.restore();
+                }
+            }
+        }],
     };
-    // If we have stackedDisaggregation, we need to group datasets into stacks.
-    config.data.datasets.forEach(function(dataset) {
-      var disaggregation = $.extend({}, dataset.disaggregation);
-      // We're going to "stringify" each combination of disaggregations in order
-      // to place them in their own "stacks". To place "stacked" disaggregations
-      // into the same stack, we set them as "samestack" before stringifying.
-      // Note that the string "samestack" is completely arbitrary.
-      if (typeof disaggregation[info.stackedDisaggregation] !== 'undefined') {
-        disaggregation[info.stackedDisaggregation] = 'samestack';
-      }
-      // Use the disaggregation as a unique id for each stack.
-      dataset.stack = JSON.stringify(disaggregation);
-    });
     // Add these overrides onto the normal config, and return it.
     $.extend(true, config, overrides);
-  }
 });
 </script>
 
@@ -866,18 +859,9 @@ opensdg.chartConfigAlter(function(config, info) {
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Datenquelle:</dt>
-        <dd>Bezirksamt Treptow-Köpenick</dd>
-        
 
         
-        <dt>Geographische Abdeckung:</dt>
-        <dd>Treptow-Köpenick</dd>
-        
 
-        
-        <dt>Einheit:</dt>
-        <dd>kg (akkumuliert)</dd>
         
 
         
@@ -912,18 +896,9 @@ opensdg.chartConfigAlter(function(config, info) {
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Datenquelle:</dt>
-        <dd>Bezirksamt Treptow-Köpenick</dd>
-        
 
         
-        <dt>Geographische Abdeckung:</dt>
-        <dd>Treptow-Köpenick</dd>
-        
 
-        
-        <dt>Einheit:</dt>
-        <dd>kg (akkumuliert)</dd>
         
 
         
@@ -1025,7 +1000,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Geographische Abdeckung </th>
         <td>
           
-            <p>Treptow-Köpenick</p>
+            
 
           
         </td>
@@ -1039,7 +1014,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Einheit </th>
         <td>
           
-            <p>kg (akkumuliert)</p>
+            
 
           
         </td>
@@ -1143,10 +1118,6 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/4fb99cdadeadb695756c5f59fbeae42976276d1e" target="_blank">
-                2022-01-12: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
-            
 
           
         </td>
@@ -1169,10 +1140,6 @@ data-event-label="Change to Sources tab"
             
             
 
-            
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/cf72b34809188354f978868524a94ac4d19fa55e" target="_blank">
-                2022-02-19: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
             
 
           
@@ -1323,7 +1290,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Geographische Abdeckung </th>
         <td>
           
-            <p>Treptow-Köpenick</p>
+            
 
           
         </td>
@@ -1337,7 +1304,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Einheit </th>
         <td>
           
-            <p>kg (akkumuliert)</p>
+            
 
           
         </td>
@@ -1441,10 +1408,6 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/4fb99cdadeadb695756c5f59fbeae42976276d1e" target="_blank">
-                2022-01-12: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
-            
 
           
         </td>
@@ -1467,10 +1430,6 @@ data-event-label="Change to Sources tab"
             
             
 
-            
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/cf72b34809188354f978868524a94ac4d19fa55e" target="_blank">
-                2022-02-19: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
             
 
           
@@ -1593,7 +1552,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Indikatorennummerierung </th>
         <td>
           
-            <p>2.3.1</p>
+            
 
           
         </td>
@@ -1707,263 +1666,6 @@ data-event-label="Change to Sources tab"
 
 
 
-
-  <div class="row">
-  
-    
-    
-    <div class="col-md-6">
-      
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p>Bezirksamt Treptow-Köpenick</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Periodizität </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Daten verfügbar seit </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Geographische Abdeckung </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Link zur Datenquelle </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://foodsharing.de/" target="_blank">
-                https://foodsharing.de/ <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Veröffentlichungsdatum </th>
-        <td>
-          
-            
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Nächste Veröffentlichung am </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Statistische Klassifizierung </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Kontaktinformationen </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      <tr>
-        <th scope="row">Weitere Informationen </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</table>
-
-    </div>
-    
-  </div>
 
 
 </div>
@@ -2371,12 +2073,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221027180710'></script>
+<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221027204407'></script>
 
 
     
     
-    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221027180710"></script><script>
+    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221027204407"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
