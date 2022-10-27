@@ -12,7 +12,7 @@
     {% include components/goal/goal-content.html content=content %}
 
     <div class="container" style="margin-left: -12px">
-        <h2>{{ page.t.general.targets_and_indicators }}</h2>
+        <h2>Indikatoren</h2>
 
         {% assign goal_indicators = page.indicators | where: 'goal_number', page.goal.number | group_by: 'target_number' %}
         {% for group in goal_indicators %}
