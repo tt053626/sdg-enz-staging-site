@@ -3539,6 +3539,37 @@ body {
   background: white top left repeat-x;
   padding-top: 15px; }
 
+/* goal-by-target-page*/
+.layout-goal-by-target-vertical .goal-target-and-indicators {
+  margin-bottom: 0px; }
+  .layout-goal-by-target-vertical .goal-target-and-indicators::after {
+    content: "" / "";
+    height: 1px;
+    border-bottom: 0px;
+    width: 0;
+    margin-left: 60px;
+    padding-bottom: 0px;
+    display: inline-block; }
+@media screen and (min-width: 769px) {
+  .layout-goal-by-target-vertical .goal-indicator {
+    min-height: 80px;
+    margin-left: 0px;
+    position: relative;
+    width: calc(100% - 60px); }
+    .layout-goal-by-target-vertical .goal-indicator .indicator-name {
+      width: 75%; }
+    .layout-goal-by-target-vertical .goal-indicator .status {
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin-top: 0;
+      width: min-content; } }
+@media screen and (min-width: 992px) {
+  .layout-goal-by-target-vertical .goal-indicator {
+    min-height: auto; }
+    .layout-goal-by-target-vertical .goal-indicator .status {
+      width: auto; } }
+
 /* goal-footer*/
 #text {
   padding-bottom: 20px; }
