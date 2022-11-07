@@ -14,14 +14,6 @@
           "status": "complete"
         },
         {
-          "id": "1-2",
-          "title": "global_indicators.1-2-title",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/1-2",
-          "status": "complete"
-        },
-        {
           "id": "1-3",
           "title": "global_indicators.1-3-title",
           "description": "",
@@ -35,6 +27,14 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-enz-staging-site/1-4",
+          "status": "complete"
+        },
+        {
+          "id": "1-2 (a)",
+          "title": "Armut bei Kindern (< 15 Jahre; Bedarfsgemeinschaften)",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-enz-staging-site/1-2 (a)",
           "status": "complete"
         }]
     }
