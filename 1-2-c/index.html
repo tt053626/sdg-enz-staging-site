@@ -136,7 +136,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221107161651">
+        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221107211241">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -404,7 +404,7 @@ data-event-label="high"
                   </a>
                 </div>
                 <div class="col col-lg-2 pull-right">
-                  <a href="/sdg-enz-staging-site/2-1-1" class="btn btn-primary btn-block goal-1 navigation-btn btn-right" role="button">
+                  <a href="/sdg-enz-staging-site/2-1" class="btn btn-primary btn-block goal-1 navigation-btn btn-right" role="button">
                     <i class="fa fa-chevron-right" aria-hidden="true" style="font-size: 45px;"></i><span id="next-link" class="hidden-sm hidden-xs"></span>
                   </a>
                 </div>
@@ -460,6 +460,13 @@ data-event-label="high"
 </div>
 
 
+<div class="row" id="page-content">
+    <div class="col-xs-12">
+        <p>Bei dieser Sozialleistung handelt es sich um eine nach dem 4. Kapitel SGB XII bedürftigkeitsabhängige Leistung, die älteren Menschen ab Vollendung des 65. Lebensjahres zur Sicherung ihres Lebensunterhalts dienen soll. In den nächsten Jahren muss mit zunehmender Altersarmut gerechnet werden, die auf Rentenreformen und auf die Entwicklung am Arbeitsmarkt zurückzuführen ist. Bei der Bezugsgröße Bevölkerung ist zu beachten, dass sich die Zahlen vor 2011 auf die Fortschreibung auf Basis der Volkszählung 1987 (BRD) und 1981 (DDR) und ab 2011 auf die Fortschreibung auf Basis des Zensus 2011 beziehen.</p>
+
+    </div>
+</div>
+
 
     <style>
     section {
@@ -480,10 +487,10 @@ data-event-label="high"
      id="indicatorData"
      data-indicatorid='indicator_1-2-c'
      data-id="1-2-c"
-     data-country="Australia"
-     data-charttitle="global_indicators.1-2-3-title"
+     data-country="Land BW"
+     data-charttitle="Armut bei Älteren (> 65 Jahre)"
      data-charttitles="null"
-     data-measurementunit="Absolute Zahlen"
+     data-measurementunit="Prozent"
      data-xaxislabel=""
      data-showdata="true"
      data-graphtype="line"
@@ -496,7 +503,7 @@ data-event-label="high"
      data-graphtargetlines="null"
      data-graphseriesbreaks="null"
      data-indicatordownloads="null"
-     data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;data.area&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Siedlungsfläche&quot;,&quot;Wohnbaufläche&quot;,&quot;Industrie- und Gewerbefläche&quot;,&quot;Sport-, Freizeit- und Erholungsfläche&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Fläche&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+     data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Region&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Enzkreis&quot;,&quot;Land BW&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Region&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
      data-compositebreakdownlabel=""
      data-precision="null"
 >
@@ -530,7 +537,7 @@ data-event-label="high"
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>global_indicators.1-2-3-title</caption>
+      <caption>Armut bei Älteren (> 65 Jahre)</caption>
       <thead>
         
       </thead>
@@ -542,9 +549,13 @@ data-event-label="high"
 
   <div id="datatableFooter">
     
+    <p>Datenquelle: BBSR-INKAR</p>
     
     
-    <p>Einheit: Absolute Zahlen</p>
+    <p>Geographische Abdeckung: Land BW</p>
+    
+    
+    <p>Einheit: Prozent</p>
     
     
   </div>
@@ -591,7 +602,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">global_indicators.1-2-3-title</h4>
+          <h4 id="chart-heading" class="chart-title">Armut bei Älteren (> 65 Jahre)</h4>
           <div id="chart" class="plot-container">
             
 <canvas
@@ -841,12 +852,18 @@ opensdg.chartConfigAlter(function(config, info) {
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
+        <dt>Datenquelle:</dt>
+        <dd>BBSR-INKAR</dd>
+        
 
+        
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Land BW</dd>
         
 
         
         <dt>Einheit:</dt>
-        <dd>Absolute Zahlen</dd>
+        <dd>Prozent</dd>
         
 
         
@@ -881,12 +898,18 @@ opensdg.chartConfigAlter(function(config, info) {
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
+        <dt>Datenquelle:</dt>
+        <dd>BBSR-INKAR</dd>
+        
 
+        
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Land BW</dd>
         
 
         
         <dt>Einheit:</dt>
-        <dd>Absolute Zahlen</dd>
+        <dd>Prozent</dd>
         
 
         
@@ -988,7 +1011,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Geographische Abdeckung </th>
         <td>
           
-            
+            <p>Land BW</p>
 
           
         </td>
@@ -1002,7 +1025,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Einheit </th>
         <td>
           
-            <p>Absolute Zahlen</p>
+            <p>Prozent</p>
 
           
         </td>
@@ -1106,7 +1129,7 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/8f69bd9a0698971ae94971110edb431675b3fdf6" target="_blank">
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/5e0ceed7188820eb7b3dc9c8da0dcda698935320" target="_blank">
                 2022-11-07: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
@@ -1133,7 +1156,7 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/58b7e3ee16c2d64518fcf3d9c5b19660f38d39a3" target="_blank">
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/46aa968f0b461d617e740899e1f9620ccb7bcaa4" target="_blank">
                 2022-11-07: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
@@ -1286,7 +1309,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Geographische Abdeckung </th>
         <td>
           
-            
+            <p>Land BW</p>
 
           
         </td>
@@ -1300,7 +1323,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Einheit </th>
         <td>
           
-            <p>Absolute Zahlen</p>
+            <p>Prozent</p>
 
           
         </td>
@@ -1404,7 +1427,7 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/8f69bd9a0698971ae94971110edb431675b3fdf6" target="_blank">
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/5e0ceed7188820eb7b3dc9c8da0dcda698935320" target="_blank">
                 2022-11-07: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
@@ -1431,7 +1454,7 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/58b7e3ee16c2d64518fcf3d9c5b19660f38d39a3" target="_blank">
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/46aa968f0b461d617e740899e1f9620ccb7bcaa4" target="_blank">
                 2022-11-07: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
@@ -1670,6 +1693,259 @@ data-event-label="Change to Sources tab"
 
 
 
+
+  <div class="row">
+  
+    
+    
+    <div class="col-md-6">
+      
+      <table class="table">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p>BBSR-INKAR</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Periodizität </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Daten verfügbar seit </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Geographische Abdeckung </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Link zur Datenquelle </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Veröffentlichungsdatum </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Nächste Veröffentlichung am </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Statistische Klassifizierung </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Kontaktinformationen </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      <tr>
+        <th scope="row">Weitere Informationen </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </div>
+    
+  </div>
 
 
 </div>
@@ -2077,12 +2353,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221107161651'></script>
+<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221107211241'></script>
 
 
     
     
-    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221107161651"></script><script>
+    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221107211241"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

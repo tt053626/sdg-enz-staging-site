@@ -136,7 +136,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221107161651">
+        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221107211241">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -462,7 +462,7 @@ data-event-label="high"
 
 <div class="row" id="page-content">
     <div class="col-xs-12">
-        <p>Die Armutslage von Kindern steht immer in Abhängigkeit zur Armutslage von Erziehungsberechtigten. Besonders betroffen sind Kinder Alleinerziehender sowie aus Familien mit ausländischer Herkunft oder aus Familien mit vielen Kindern. Verschiedene Studien weisen darauf hin, dass die Kinderarmut zu einem Dauerzustand in Deutschland geworden ist. Arm zu sein bedeutet nicht nur, dass die Mittel zum physischen Überleben fehlen, Armut ist auch mit spezieller Diskriminierung und ungleicher Bildungs- und Teilhabechancen verbunden. Bei der Bezugsgröße Bevölkerung ist zu beachten, dass sich die Zahlen vor 2011 auf die Fortschreibung auf Basis der Volkszählung 1987 (BRD) und 1981 (DDR) und ab 2011 auf die Fortschreibung auf Basis des Zensus 2011 beziehen. Minimale Abweichungen der Indikatorwerte zu den Werten im ‘Wegweiser Kommune’/SDG-Portal ergeben sich durch Datenhaltung und Anpassungen von Daten an Gebietsstände sowie die (Nicht-)Berücksichtigung von Rückrechnungen seitens der amtlichen Statistik.</p>
+        <p>Die Arbeitslosenquote zeigt die relative Unterauslastung des Arbeitskräfteangebots an. Sie ist ein zentrales Maß für einen unausgeglichenen regionalen Arbeitsmarkt. Die Arbeitslosenquote in ihrer zeitlichen Entwicklung zeigt allerdings nur bedingt Strukturprobleme auf dem regionalen Arbeitsmarkt an; hierzu sind weitere Informationen des Arbeitsmarktes erforderlich. Die Zusammenlegung von Arbeitslosen- und Sozialhilfeleistung im Zuge der Arbeitsmarkreformen 2005 hat zunächst zum Anstieg der Arbeitslosenquote beigetragen. Der anschließende Rückgang ist dann eher auf eine verlangsamte Produktivitätsentwicklung, die Zunahme atypischer Beschäftigungsverhältnisse, die Verteilung des Arbeitsvolumens auf mehr Köpfe sowie auf sinkende Arbeitskraftreserven zurückzuführen. Für die Bezugsgröße (Nenner) gibt es unterschiedliche Varianten; hier werden alle zivilen Erwerbspersonen als Bezugsgröße gewählt. Zivile Erwerbspersonen umfassen die zivilen Erwerbstätigen und Arbeitslose. Regional werden zivile Erwerbspersonen bei kleinen Einheiten unter 1.000 Personen gar nicht und bei Einheiten zwischen 1.000 und 15.000 Personen nach Ermessen ausgewiesen. Daher berechnet die BA für die Ebene der Gemeinden keine Arbeitslosenquote. Auf Ebene der Gemeinden schätzt das BBSR die zivilen Erwerbspersonen anhand der kreisweisen Erwerbsbeteiligung und der gemeindlichen Angaben zur Bevölkerung im Alter von 15 bis unter 65 Jahren und berechnet auf dieser Basis eine Arbeitslosenquote für die Gemeindeverbände. Letztere stellen daher nur eine grobe Schätzung dar und spiegeln nicht zwangsläufig die echte Arbeitslosenquote für den Gemeindeverband wider.</p>
 
     </div>
 </div>
@@ -503,7 +503,7 @@ data-event-label="high"
      data-graphtargetlines="null"
      data-graphseriesbreaks="null"
      data-indicatordownloads="null"
-     data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Group&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;A&quot;,&quot;B&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Group&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+     data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Region&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Enzkreis&quot;,&quot;Land.BW&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Region&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
      data-compositebreakdownlabel=""
      data-precision="null"
 >
@@ -540,40 +540,8 @@ data-event-label="high"
       <caption>Armut SGB-II / SGB-XII-Quote</caption>
       <thead>
         
-        
-        <th scope="col">Year</th>
-        
-        
-        
-        <th scope="col" class="table-value">Value</th>
-        
-        
       </thead>
       <tbody>
-        
-        <tr>
-          
-          
-          <td>2015</td>
-          
-          
-          
-          <td class="table-value">2</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2016</td>
-          
-          
-          
-          <td class="table-value">2</td>
-          
-          
-        </tr>
         
       </tbody>
     </table>
@@ -581,7 +549,7 @@ data-event-label="high"
 
   <div id="datatableFooter">
     
-    <p>Datenquelle: Landesamt BW</p>
+    <p>Datenquelle: Bundesagentur für Arbeit, Statistisches Bundesamt, Statistische Ämter der Länder, Bertelsmannstiftung (Wegweiser-Kommune)</p>
     
     
     <p>Geographische Abdeckung: Land BW</p>
@@ -885,7 +853,7 @@ opensdg.chartConfigAlter(function(config, info) {
     <dl>
         
         <dt>Datenquelle:</dt>
-        <dd>Landesamt BW</dd>
+        <dd>Bundesagentur für Arbeit, Statistisches Bundesamt, Statistische Ämter der Länder, Bertelsmannstiftung (Wegweiser-Kommune)</dd>
         
 
         
@@ -931,7 +899,7 @@ opensdg.chartConfigAlter(function(config, info) {
     <dl>
         
         <dt>Datenquelle:</dt>
-        <dd>Landesamt BW</dd>
+        <dd>Bundesagentur für Arbeit, Statistisches Bundesamt, Statistische Ämter der Länder, Bertelsmannstiftung (Wegweiser-Kommune)</dd>
         
 
         
@@ -1161,8 +1129,8 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/055a967f6c2555771daa1873769e1af76ba88c0f" target="_blank">
-                2022-10-27: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/7a93b96d41054ffdbe4faf1f1b5df06dea6de8f8" target="_blank">
+                2022-11-07: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
 
@@ -1188,7 +1156,7 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/58b7e3ee16c2d64518fcf3d9c5b19660f38d39a3" target="_blank">
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/b26d36dee49e4a1ecd596866010bf9348dfd5a2e" target="_blank">
                 2022-11-07: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
@@ -1459,8 +1427,8 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/055a967f6c2555771daa1873769e1af76ba88c0f" target="_blank">
-                2022-10-27: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/7a93b96d41054ffdbe4faf1f1b5df06dea6de8f8" target="_blank">
+                2022-11-07: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
 
@@ -1486,7 +1454,7 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/58b7e3ee16c2d64518fcf3d9c5b19660f38d39a3" target="_blank">
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/b26d36dee49e4a1ecd596866010bf9348dfd5a2e" target="_blank">
                 2022-11-07: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
@@ -1771,7 +1739,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Organisation </th>
         <td>
           
-            <p>Landesamt BW</p>
+            <p>Bundesagentur für Arbeit, Statistisches Bundesamt, Statistische Ämter der Länder, Bertelsmannstiftung (Wegweiser-Kommune)</p>
 
           
         </td>
@@ -2385,12 +2353,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221107161651'></script>
+<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221107211241'></script>
 
 
     
     
-    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221107161651"></script><script>
+    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221107211241"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
