@@ -14,27 +14,27 @@
           "status": "complete"
         },
         {
-          "id": "1-3",
-          "title": "global_indicators.1-3-title",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/1-3",
-          "status": "complete"
-        },
-        {
-          "id": "1-4",
-          "title": "global_indicators.1-4-title",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/1-4",
-          "status": "complete"
-        },
-        {
-          "id": "1-2 (a)",
+          "id": "1-2-a",
           "title": "Armut bei Kindern (< 15 Jahre; Bedarfsgemeinschaften)",
           "description": "",
           "keywords": "",
-          "href": "/sdg-enz-staging-site/1-2 (a)",
+          "href": "/sdg-enz-staging-site/1-2-a",
+          "status": "complete"
+        },
+        {
+          "id": "1-2-b",
+          "title": "Armut bei Jugendlichen (15 – 17 Jahre; Bedarfsgemeinschaften)",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-enz-staging-site/1-2-b",
+          "status": "complete"
+        },
+        {
+          "id": "1-2-c",
+          "title": "Armut bei Älteren (> 65 Jahre)",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-enz-staging-site/1-2-c",
           "status": "complete"
         }]
     }
