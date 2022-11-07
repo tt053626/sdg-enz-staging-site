@@ -136,7 +136,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221107152254">
+        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221107161651">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -460,6 +460,37 @@ data-event-label="high"
 </div>
 
 
+<div class="row" id="page-content">
+    <div class="col-xs-12">
+        <p>Der Indikator zeigt den Anteil umgesetzter Klimaschutzmaßnahmen als Summenindex 19 dichotomer Variablen, basierend auf einem standardisierten Fragebogen (Peters et al., 2020). <br /></p>
+
+<p>Im Jahr 2021 wurden die Fragen folgendermaßen beantwortet:</p>
+
+<ol>
+  <li>Liegt ein politischer Beschluss zu kommunalen Klimaschutzzielen in Ihrer Kommune vor? Antwort: Nein <br /></li>
+  <li>Wurde in Ihrer Kommune ein Klimaschutzkonzept erstellt? Antwort: Nein <br /></li>
+  <li>Hat Ihre Kommune Personal, welches explizit für den Klimaschutz verantwortlich ist? Antwort: Ja <br /></li>
+  <li>Wurde eine Treibhausgas-/CO2-Bilanz erstellt und diese mindestens einmal fortgeschrieben? Antwort: Nein <br /></li>
+  <li>Gibt es eine regelmäßige oder institutionalisierte ressortübergreifende Zusammenarbeit innerhalb der Kommunalverwaltung zum Klimaschutz? Antwort: Nein <br /></li>
+  <li>Ist ausschließlich für Energiemanagement zuständiges Personal vorhanden? Antwort: Ja <br /></li>
+  <li>Hat Ihre Kommune einen Rad- oder Fußverkehrsbeauftragten? Antwort: Ja <br /></li>
+  <li>Werden erneuerbare Energien auf kommunalen Liegenschaften eingesetzt? Antwort: Ja <br /></li>
+  <li>Wurde in Ihrer Kommune eine systematische Untersuchung durchgeführt, welche der kommunalen Gebäude für den Einsatz von (bestimmten) erneuerbaren Energien in Frage kommen? Antwort: Ja <br /></li>
+  <li>Gibt es für Ihre gesamte Kommune oder Region (über kommunale Liegenschaften hinaus) eine systematische Untersuchung für die Nutzung (bestimmter) erneuerbarer Energien? Antwort: Nein <br /></li>
+  <li>Bestehen konkrete Ausbauziele für den Einsatz erneuerbarer Energien in den eigenen Liegenschaften? Antwort: Ja <br /></li>
+  <li>Bestehen konkrete Ausbauziele für erneuerbare Energien für die gesamte Kommune? Antwort: Nein <br /></li>
+  <li>Ist klimaschonende Beschaffung in Ihrer Kommune die Regel? Antwort: Nein <br /></li>
+  <li>Nutzt Ihre Kommune vorhandene bauleitplanerische, stadtplanerische oder weitere Regulierungskompetenzen, um Regelungen oder Festsetzungen im Sinne des Klimaschutzes zu erwirken? Antwort: Ja <br /></li>
+  <li>Sind Angebote der Kommune zur Sensibilisierung und Information der Bürger:innen zu Klimaschutz und erneuerbaren Energien vorhanden? Antwort: Ja <br /></li>
+  <li>Bestehen ein oder mehrere aktuell laufende eigene kommunale Förderprogramme für Klimaschutz / Energie für Akteur:innen der lokalen Gesellschaft? Antwort: Ja <br /></li>
+  <li>Ist Ihre Kommune Mitglied im Klima-Bündnis, dem European Energy Award, dem „Konvent der Bürgermeister für Klima &amp; Energie“, einem vergleichbaren Zusammenschluss oder ist sie „dena-Energieeffizienz-Kommune“? (dena: Deutsche Energie-Agentur) Antwort: Ja <br /></li>
+  <li>Hat Ihre Kommune in den letzten 10 Jahren eine Klimaschutz-Auszeichnung erhalten? Antwort: Nein <br /></li>
+  <li>Unterhält Ihre Kommune eine internationale kommunale Klimapartnerschaft? Antwort: Nein <br /></li>
+</ol>
+
+    </div>
+</div>
+
 
     <style>
     section {
@@ -483,7 +514,7 @@ data-event-label="high"
      data-country="Australia"
      data-charttitle="Treibhausgas-Emissionen – Enzkreis gesamt"
      data-charttitles="null"
-     data-measurementunit=""
+     data-measurementunit="ja/nein"
      data-xaxislabel=""
      data-showdata="true"
      data-graphtype="line"
@@ -543,6 +574,8 @@ data-event-label="high"
   <div id="datatableFooter">
     
     
+    
+    <p>Einheit: ja/nein</p>
     
     
   </div>
@@ -843,6 +876,9 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+        <dt>Einheit:</dt>
+        <dd>ja/nein</dd>
+        
 
         
 
@@ -879,6 +915,9 @@ opensdg.chartConfigAlter(function(config, info) {
 
         
 
+        
+        <dt>Einheit:</dt>
+        <dd>ja/nein</dd>
         
 
         
@@ -994,7 +1033,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Einheit </th>
         <td>
           
-            
+            <p>ja/nein</p>
 
           
         </td>
@@ -1098,6 +1137,10 @@ data-event-label="Change to Sources tab"
             
 
             
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/f72b3d80d3fed43462f1760525fbc9f16b4ca113" target="_blank">
+                2021-10-10: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
 
           
         </td>
@@ -1120,6 +1163,10 @@ data-event-label="Change to Sources tab"
             
             
 
+            
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/58b7e3ee16c2d64518fcf3d9c5b19660f38d39a3" target="_blank">
+                2022-11-07: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
             
 
           
@@ -1284,7 +1331,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Einheit </th>
         <td>
           
-            
+            <p>ja/nein</p>
 
           
         </td>
@@ -1388,6 +1435,10 @@ data-event-label="Change to Sources tab"
             
 
             
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/f72b3d80d3fed43462f1760525fbc9f16b4ca113" target="_blank">
+                2021-10-10: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
 
           
         </td>
@@ -1410,6 +1461,10 @@ data-event-label="Change to Sources tab"
             
             
 
+            
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/58b7e3ee16c2d64518fcf3d9c5b19660f38d39a3" target="_blank">
+                2022-11-07: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
             
 
           
@@ -2053,12 +2108,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221107152254'></script>
+<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221107161651'></script>
 
 
     
     
-    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221107152254"></script><script>
+    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221107161651"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

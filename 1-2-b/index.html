@@ -136,7 +136,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221107152254">
+        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221107161651">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -460,6 +460,62 @@ data-event-label="high"
 </div>
 
 
+<div class="row" id="page-content">
+    <div class="col-xs-12">
+        <p>Der Indikator zeigt die Anzahl der Repaircafes, Gemeinschaftswerkstätten und ReUse Shops im Bezirk Treptow-Köpenick. <br />
+<br /></p>
+
+<p><strong>Repair Cafes</strong> <br /></p>
+
+<ul>
+  <li>Repair Café Schöneweide <br /></li>
+</ul>
+<p><a href="https://www.industriesalon.de/angebote/repair-cafe/">https://www.industriesalon.de/angebote/repair-cafe/</a></p>
+
+<ul>
+  <li>Repair Café Treptow-Köpenick (Café Grenzenlos) <br /></li>
+</ul>
+<p><a href="https://www.cafe-grenzenlos.de/repair-cafe.html">https://www.cafe-grenzenlos.de/repair-cafe.html</a></p>
+
+<ul>
+  <li>KungerKiezInitiative <br /></li>
+</ul>
+<p><a href="https://kungerkiez.de/">https://kungerkiez.de/</a></p>
+
+<ul>
+  <li>Allende-2-hilft e.V. <br /></li>
+</ul>
+<p><a href="http://allende2hilft.de/category/projekte/fahrradwerkstatt/#">http://allende2hilft.de/category/projekte/fahrradwerkstatt/#</a></p>
+
+<ul>
+  <li>Kiezladen Wama – „Alte Waschmaschinen-Börse“ + Bürgerhaus Altglienicke <br /></li>
+</ul>
+<p><a href="https://kiezladen-wama.de/">https://kiezladen-wama.de/</a></p>
+
+<p><strong>Community Workshops</strong> <br /></p>
+
+<ul>
+  <li>Werkstatt für Lastenrad Eigenbau <br /></li>
+</ul>
+<p><a href="https://kunst-stoffe-berlin.de/lastenrad-eigenbau/">https://kunst-stoffe-berlin.de/lastenrad-eigenbau/</a></p>
+
+<ul>
+  <li>Werkstattprojekt Linienhof - Kollektive Metallwerkstatt <br /></li>
+</ul>
+<p><a href="https://linienhof.blackblogs.org/">https://linienhof.blackblogs.org/</a></p>
+
+<p><strong>ReUse Shops</strong> <br /></p>
+
+<ul>
+  <li>ReUse Shop Köpenick <br /></li>
+</ul>
+<p><a href="https://reuse-shop.de/">https://reuse-shop.de/</a></p>
+
+<p><br /></p>
+
+    </div>
+</div>
+
 
     <style>
     section {
@@ -481,9 +537,9 @@ data-event-label="high"
      data-indicatorid='indicator_1-2-b'
      data-id="1-2-b"
      data-country="Australia"
-     data-charttitle="Armut bei Jugendlichen (15 – 17 Jahre; Bedarfsgemeinschaften)"
+     data-charttitle="Anteil der Bevölkerung, die unter der nationalen Armutsgrenze lebt, nach Geschlecht und Alter"
      data-charttitles="null"
-     data-measurementunit=""
+     data-measurementunit="Absolute Zahlen"
      data-xaxislabel=""
      data-showdata="true"
      data-graphtype="line"
@@ -530,7 +586,7 @@ data-event-label="high"
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Armut bei Jugendlichen (15 – 17 Jahre; Bedarfsgemeinschaften)</caption>
+      <caption>Anteil der Bevölkerung, die unter der nationalen Armutsgrenze lebt, nach Geschlecht und Alter</caption>
       <thead>
         
       </thead>
@@ -543,6 +599,8 @@ data-event-label="high"
   <div id="datatableFooter">
     
     
+    
+    <p>Einheit: Absolute Zahlen</p>
     
     
   </div>
@@ -589,7 +647,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Armut bei Jugendlichen (15 – 17 Jahre; Bedarfsgemeinschaften)</h4>
+          <h4 id="chart-heading" class="chart-title">Anteil der Bevölkerung, die unter der nationalen Armutsgrenze lebt, nach Geschlecht und Alter</h4>
           <div id="chart" class="plot-container">
             
 <canvas
@@ -843,6 +901,9 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+        <dt>Einheit:</dt>
+        <dd>Absolute Zahlen</dd>
+        
 
         
 
@@ -879,6 +940,9 @@ opensdg.chartConfigAlter(function(config, info) {
 
         
 
+        
+        <dt>Einheit:</dt>
+        <dd>Absolute Zahlen</dd>
         
 
         
@@ -994,7 +1058,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Einheit </th>
         <td>
           
-            
+            <p>Absolute Zahlen</p>
 
           
         </td>
@@ -1098,6 +1162,10 @@ data-event-label="Change to Sources tab"
             
 
             
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/8f69bd9a0698971ae94971110edb431675b3fdf6" target="_blank">
+                2022-11-07: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
 
           
         </td>
@@ -1120,6 +1188,10 @@ data-event-label="Change to Sources tab"
             
             
 
+            
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/58b7e3ee16c2d64518fcf3d9c5b19660f38d39a3" target="_blank">
+                2022-11-07: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
             
 
           
@@ -1284,7 +1356,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Einheit </th>
         <td>
           
-            
+            <p>Absolute Zahlen</p>
 
           
         </td>
@@ -1388,6 +1460,10 @@ data-event-label="Change to Sources tab"
             
 
             
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/8f69bd9a0698971ae94971110edb431675b3fdf6" target="_blank">
+                2022-11-07: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
 
           
         </td>
@@ -1410,6 +1486,10 @@ data-event-label="Change to Sources tab"
             
             
 
+            
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/58b7e3ee16c2d64518fcf3d9c5b19660f38d39a3" target="_blank">
+                2022-11-07: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
             
 
           
@@ -2053,12 +2133,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221107152254'></script>
+<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221107161651'></script>
 
 
     
     
-    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221107152254"></script><script>
+    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221107161651"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

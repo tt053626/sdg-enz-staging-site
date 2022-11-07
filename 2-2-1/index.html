@@ -136,7 +136,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221107152254">
+        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221107161651">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -460,6 +460,14 @@ data-event-label="high"
 </div>
 
 
+<div class="row" id="page-content">
+    <div class="col-xs-12">
+        <p>Der Indikator zeigt die Anzahl der Lebensmittel in der Berliner Schulverpflegung, die ausschließlich aus fairem Handel bezogen werden müssen. Die Produkte Reis, Bananen und Ananas sind seit August 2020 nur aus fairem Handel zu verwenden. 
+Die Verpflichtung ist das Ergebnis eines Bieterdialogs zur sozial-nachhaltigen Beschaffung in der Berliner Schulverpflegung. Hier haben sich die Berliner Bezirke, mit Unterstützung der Initiative Romero e. V., für eine fairere Schulverpflegung eingesetzt.</p>
+
+    </div>
+</div>
+
 
     <style>
     section {
@@ -481,9 +489,9 @@ data-event-label="high"
      data-indicatorid='indicator_2-2-1'
      data-id="2-2-1"
      data-country="Australia"
-     data-charttitle="Ökologische Landwirtschaft"
+     data-charttitle="Anzahl der fair zertifizierten Lebensmittel"
      data-charttitles="null"
-     data-measurementunit=""
+     data-measurementunit="Anzahl der fair zertifizierten Lebensmittel"
      data-xaxislabel=""
      data-showdata="true"
      data-graphtype="line"
@@ -530,7 +538,7 @@ data-event-label="high"
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Ökologische Landwirtschaft</caption>
+      <caption>Anzahl der fair zertifizierten Lebensmittel</caption>
       <thead>
         
         
@@ -588,6 +596,8 @@ data-event-label="high"
     
     
     
+    <p>Einheit: Anzahl der fair zertifizierten Lebensmittel</p>
+    
     
   </div>
 
@@ -633,7 +643,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Ökologische Landwirtschaft</h4>
+          <h4 id="chart-heading" class="chart-title">Anzahl der fair zertifizierten Lebensmittel</h4>
           <div id="chart" class="plot-container">
             
 <canvas
@@ -887,6 +897,9 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+        <dt>Einheit:</dt>
+        <dd>Anzahl der fair zertifizierten Lebensmittel</dd>
+        
 
         
 
@@ -923,6 +936,9 @@ opensdg.chartConfigAlter(function(config, info) {
 
         
 
+        
+        <dt>Einheit:</dt>
+        <dd>Anzahl der fair zertifizierten Lebensmittel</dd>
         
 
         
@@ -1038,7 +1054,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Einheit </th>
         <td>
           
-            
+            <p>Anzahl der fair zertifizierten Lebensmittel</p>
 
           
         </td>
@@ -1142,6 +1158,10 @@ data-event-label="Change to Sources tab"
             
 
             
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/e3cd518b7d8f69ce0154289398bb002df8b51e42" target="_blank">
+                2021-08-25: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
 
           
         </td>
@@ -1164,6 +1184,10 @@ data-event-label="Change to Sources tab"
             
             
 
+            
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/58b7e3ee16c2d64518fcf3d9c5b19660f38d39a3" target="_blank">
+                2022-11-07: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
             
 
           
@@ -1328,7 +1352,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Einheit </th>
         <td>
           
-            
+            <p>Anzahl der fair zertifizierten Lebensmittel</p>
 
           
         </td>
@@ -1432,6 +1456,10 @@ data-event-label="Change to Sources tab"
             
 
             
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/e3cd518b7d8f69ce0154289398bb002df8b51e42" target="_blank">
+                2021-08-25: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
 
           
         </td>
@@ -1454,6 +1482,10 @@ data-event-label="Change to Sources tab"
             
             
 
+            
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/58b7e3ee16c2d64518fcf3d9c5b19660f38d39a3" target="_blank">
+                2022-11-07: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
             
 
           
@@ -2097,12 +2129,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221107152254'></script>
+<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221107161651'></script>
 
 
     
     
-    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221107152254"></script><script>
+    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221107161651"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
