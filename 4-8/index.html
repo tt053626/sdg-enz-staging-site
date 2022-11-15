@@ -136,7 +136,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221115203853">
+        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221115222822">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -462,8 +462,9 @@ data-event-label="high"
 
 <div class="row" id="page-content">
     <div class="col-xs-12">
-        <p>Der Indikator zeigt die Anzahl der Schulen in Treptow-Köpenick, welche als “Umweltschule in Europa - Internationale Nachhaltigkeitsschule” ausgezeichnet wurden. ‘Umweltschule in Europa - Internationale Nachhaltigkeitsschule’ ist eine Ausschreibung der internationalen Umweltbildungsorganisation Foundation for Environmental Education (FEE), in Deutschland vertreten durch die Deutsche Gesellschaft für Umwelterziehung (DGU).
-Es ist das größte Umweltbildungsprogramm an deutschen Schulen.</p>
+        <p>Jede Form der Ausgrenzung und Diskriminierung von Menschen mit Behinderung ist eine Menschenrechtsverletzung. Dies verdeutlicht die UN-Konvention für die Rechte von Menschen mit Behinderung. Demnach ist Behinderung als selbstverständlicher Bestandteil menschlichen Lebens in Deutschland anerkannt.
+Die Vielfalt von Menschen ist eine Bereicherung für alle, was in körperlicher, kognitiver und psychischer Fähigkeit ebenso gilt, wie in der sozialen, ethnischen und nationalen Herkunft, der Hautfarbe, des Alters, des Geschlechts, der sexuellen Orientierung, Kultur, Religion oder Weltanschauung.
+Alle Menschen sollen in allen Teilbereichen der Gesellschaft aktiv teilhaben können.</p>
 
     </div>
 </div>
@@ -488,16 +489,16 @@ Es ist das größte Umweltbildungsprogramm an deutschen Schulen.</p>
      id="indicatorData"
      data-indicatorid='indicator_4-8'
      data-id="4-8"
-     data-country="Australia"
-     data-charttitle="Anzahl der Schulen in Treptow-Köpenick, welche als 'Umweltschule in Europa - Internationale Nachhaltigkeitsschule' ausgezeichnet wurden"
+     data-country="Land BW"
+     data-charttitle="Exklusionsquote"
      data-charttitles="null"
-     data-measurementunit="Anzahl der Auszeichnungen"
+     data-measurementunit="Prozent"
      data-xaxislabel=""
      data-showdata="true"
      data-graphtype="line"
      data-geocoderegex=""
      data-showmap=""
-     data-startvalues="null"
+     data-startvalues="[{&quot;field&quot;:&quot;Region&quot;,&quot;value&quot;:&quot;Enzkreis&quot;},{&quot;field&quot;:&quot;Region&quot;,&quot;value&quot;:&quot;Land BW&quot;}]"
      data-graphlimits="null"
      data-stackeddisaggregation=""
      data-graphannotations="null"
@@ -538,7 +539,7 @@ Es ist das größte Umweltbildungsprogramm an deutschen Schulen.</p>
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Anzahl der Schulen in Treptow-Köpenick, welche als 'Umweltschule in Europa - Internationale Nachhaltigkeitsschule' ausgezeichnet wurden</caption>
+      <caption>Exklusionsquote</caption>
       <thead>
         
         
@@ -583,8 +584,10 @@ Es ist das größte Umweltbildungsprogramm an deutschen Schulen.</p>
   <div id="datatableFooter">
     
     
+    <p>Geographische Abdeckung: Land BW</p>
     
-    <p>Einheit: Anzahl der Auszeichnungen</p>
+    
+    <p>Einheit: Prozent</p>
     
     
   </div>
@@ -631,7 +634,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Anzahl der Schulen in Treptow-Köpenick, welche als 'Umweltschule in Europa - Internationale Nachhaltigkeitsschule' ausgezeichnet wurden</h4>
+          <h4 id="chart-heading" class="chart-title">Exklusionsquote</h4>
           <div id="chart" class="plot-container">
             
 <canvas
@@ -883,10 +886,13 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Land BW</dd>
+        
 
         
         <dt>Einheit:</dt>
-        <dd>Anzahl der Auszeichnungen</dd>
+        <dd>Prozent</dd>
         
 
         
@@ -923,10 +929,13 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Land BW</dd>
+        
 
         
         <dt>Einheit:</dt>
-        <dd>Anzahl der Auszeichnungen</dd>
+        <dd>Prozent</dd>
         
 
         
@@ -991,7 +1000,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Indikatorennummerierung </th>
         <td>
           
-            
+            <p>4.8</p>
 
           
         </td>
@@ -1019,7 +1028,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Definitionen </th>
         <td>
           
-            
+            <p>(Anzahl der SchülerInnen an einer Förderschule) / (Anzahl der SchülerInnen gesamt) * 100</p>
 
           
         </td>
@@ -1033,7 +1042,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Einheit </th>
         <td>
           
-            <p>Anzahl der Auszeichnungen</p>
+            <p>Prozent</p>
 
           
         </td>
@@ -1047,7 +1056,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Geographische Abdeckung </th>
         <td>
           
-            
+            <p>Land BW</p>
 
           
         </td>
@@ -1075,7 +1084,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Daten verfügbar seit </th>
         <td>
           
-            
+            <p>2006</p>
 
           
         </td>
@@ -1089,7 +1098,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Datenquellen </th>
         <td>
           
-            
+            <p>Bundesinstitut für Bau-, Stadt- und Raumforschung</p>
 
           
         </td>
@@ -1136,7 +1145,7 @@ data-event-label="Change to Global Metadata tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/139f457f65313baed3918176ef32d98945cf0297" target="_blank">
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/908ac7d2686de275e46920ba820859c1975b7720" target="_blank">
                 2022-11-15: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
@@ -1201,7 +1210,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Indikatorennummerierung </th>
         <td>
           
-            
+            <p>4.8</p>
 
           
         </td>
@@ -1229,7 +1238,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Definitionen </th>
         <td>
           
-            
+            <p>(Anzahl der SchülerInnen an einer Förderschule) / (Anzahl der SchülerInnen gesamt) * 100</p>
 
           
         </td>
@@ -1243,7 +1252,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Einheit </th>
         <td>
           
-            <p>Anzahl der Auszeichnungen</p>
+            <p>Prozent</p>
 
           
         </td>
@@ -1257,7 +1266,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Geographische Abdeckung </th>
         <td>
           
-            
+            <p>Land BW</p>
 
           
         </td>
@@ -1285,7 +1294,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Daten verfügbar seit </th>
         <td>
           
-            
+            <p>2006</p>
 
           
         </td>
@@ -1299,7 +1308,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Datenquellen </th>
         <td>
           
-            
+            <p>Bundesinstitut für Bau-, Stadt- und Raumforschung</p>
 
           
         </td>
@@ -1346,7 +1355,7 @@ data-event-label="Change to Global Metadata tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/139f457f65313baed3918176ef32d98945cf0297" target="_blank">
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/908ac7d2686de275e46920ba820859c1975b7720" target="_blank">
                 2022-11-15: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
@@ -1794,12 +1803,12 @@ data-event-label="Change to Global Metadata tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221115203853'></script>
+<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221115222822'></script>
 
 
     
     
-    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221115203853"></script><script>
+    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221115222822"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

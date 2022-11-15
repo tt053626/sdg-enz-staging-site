@@ -136,7 +136,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221115203853">
+        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221115222822">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -462,15 +462,10 @@ data-event-label="high"
 
 <div class="row" id="page-content">
     <div class="col-xs-12">
-        <p>Der Indikator zeigt die Anzahl der Abholstellen in den Kiezen Treptow-Köpenicks für Produkte aus solidarischer Landwirtschaft. <br /> 
-Zur Ansicht müssen die Ortsteile im Dropdown-Menü ausgewählt werden. 
-Eine räumliche Verteilung der Abholstellen lässt sich zudem unter dem Reiter “Karte” betrachten. <br /></p>
-
-<p>Bei der solidarischen Landwirtschaft werden die Lebensmittel nicht mehr über den freien Markt, sondern direkt über Ernteanteile vertrieben. 
-Konkret handelt es sich dabei um einen Zusammenschluss von landwirtschaftlichen Betrieben mit einer Gruppe privater Haushalte. 
-Die landwirtschaftlichen Betriebe haben dabei mehr Sicherheit und die Verbraucher*/innen sind Teil eines transparenten  Wirtschaftskreislauf welcher von ihnen nicht nur finanziert sondern auch mit organisiert wird.</p>
-
-<p>Mehr Informationen finden sich hier: <a href="https://www.solidarische-landwirtschaft.org/startseite">www.solidarische-landwirtschaft.org</a></p>
+        <p>Die Mietpreise in einer Kommune sind stark vom Angebot an Wohnraum abhängig. Auch die Belegungsdichte spielt eine entscheidende Rolle und kann als Maß für die Entwicklung der Flächenremanenz herangezogen werden.
+Die aktuellen Umstände der Wohnraumknappheit erfordern insbesondere die Nachverdichtung in Kommunen. Bezahlbarer Wohnraum wird dringend benötigt, während gleichzeitig insbesondere die geburtenstarken Jahrgänge der 1960er-Jahre viel Wohnraum pro Kopf binden.
+Die Entwicklung der Flächenremanenz ist in den Speckgürteln von Ballungsräumen wie dem Enzkreis ein weitreichendes Thema. Nach einer Suburbanisierungsphase in den 1970er- bis 1990er Jahren, die aufgrund der Wohnraumknappheit zuletzt wieder aufgeblüht ist, ist es nicht unüblich, dass die Kindergeneration durch das Bildungs- und Arbeitsplatzangebot in die Innenstadtbereiche abwandert und die Elterngeneration im Eigenheim des städtischen Umlandes verweilt.
+Der Bedarf an kleineren Wohnung in den Innenstädten steigt dabei, was tendenziell mehr Wohnraum pro Kopf bindet. Hinzu kommen die erheblichen Flächenremanenzen durch das Verweilen der Elterngeneration im Wohneigentum in den Umlandgemeinden der Städte.</p>
 
     </div>
 </div>
@@ -495,16 +490,16 @@ Die landwirtschaftlichen Betriebe haben dabei mehr Sicherheit und die Verbrauche
      id="indicatorData"
      data-indicatorid='indicator_11-2'
      data-id="11-2"
-     data-country="Australia"
-     data-charttitle="Anzahl der Abholstellen für SoLaWi Produkte"
+     data-country="Land BW"
+     data-charttitle="global_indicators.11.2-title"
      data-charttitles="null"
-     data-measurementunit="Anzahl der Abholstellen"
+     data-measurementunit="Prozent"
      data-xaxislabel=""
      data-showdata="true"
      data-graphtype="line"
      data-geocoderegex=""
      data-showmap=""
-     data-startvalues="null"
+     data-startvalues="[{&quot;field&quot;:&quot;Region&quot;,&quot;value&quot;:&quot;Enzkreis&quot;},{&quot;field&quot;:&quot;Region&quot;,&quot;value&quot;:&quot;Land BW&quot;}]"
      data-graphlimits="null"
      data-stackeddisaggregation=""
      data-graphannotations="null"
@@ -545,7 +540,7 @@ Die landwirtschaftlichen Betriebe haben dabei mehr Sicherheit und die Verbrauche
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Anzahl der Abholstellen für SoLaWi Produkte</caption>
+      <caption>global_indicators.11.2-title</caption>
       <thead>
         
       </thead>
@@ -558,8 +553,10 @@ Die landwirtschaftlichen Betriebe haben dabei mehr Sicherheit und die Verbrauche
   <div id="datatableFooter">
     
     
+    <p>Geographische Abdeckung: Land BW</p>
     
-    <p>Einheit: Anzahl der Abholstellen</p>
+    
+    <p>Einheit: Prozent</p>
     
     
   </div>
@@ -606,7 +603,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Anzahl der Abholstellen für SoLaWi Produkte</h4>
+          <h4 id="chart-heading" class="chart-title">global_indicators.11.2-title</h4>
           <div id="chart" class="plot-container">
             
 <canvas
@@ -858,10 +855,13 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Land BW</dd>
+        
 
         
         <dt>Einheit:</dt>
-        <dd>Anzahl der Abholstellen</dd>
+        <dd>Prozent</dd>
         
 
         
@@ -898,10 +898,13 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Land BW</dd>
+        
 
         
         <dt>Einheit:</dt>
-        <dd>Anzahl der Abholstellen</dd>
+        <dd>Prozent</dd>
         
 
         
@@ -966,7 +969,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Indikatorennummerierung </th>
         <td>
           
-            
+            <p>11.2</p>
 
           
         </td>
@@ -994,7 +997,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Definitionen </th>
         <td>
           
-            
+            <p>Fortschreibung basierend auf Ergebnissen der Gebäude- und Wohnungszählungen (1987, 2011; Stand zum 31.12. des Jahres) <br /> a) Wohngebäude = Veränderung zum Vorjahr % <br /> b) Wohnungen insgesamt = Veränderung zum Vorjahr % <br /> c) Räume insgesamt = Veränderung zum Vorjahr % <br /> d) Belegungsdichte = EW/Whg</p>
 
           
         </td>
@@ -1008,7 +1011,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Einheit </th>
         <td>
           
-            <p>Anzahl der Abholstellen</p>
+            <p>Prozent</p>
 
           
         </td>
@@ -1022,7 +1025,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Geographische Abdeckung </th>
         <td>
           
-            
+            <p>Land BW</p>
 
           
         </td>
@@ -1036,7 +1039,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Periodizität </th>
         <td>
           
-            
+            <p>Einjahresintervalle</p>
 
           
         </td>
@@ -1050,7 +1053,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Daten verfügbar seit </th>
         <td>
           
-            
+            <p>2004</p>
 
           
         </td>
@@ -1064,7 +1067,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Datenquellen </th>
         <td>
           
-            
+            <p>Statistisches Landesamt BW</p>
 
           
         </td>
@@ -1111,7 +1114,7 @@ data-event-label="Change to Global Metadata tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/139f457f65313baed3918176ef32d98945cf0297" target="_blank">
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/908ac7d2686de275e46920ba820859c1975b7720" target="_blank">
                 2022-11-15: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
@@ -1176,7 +1179,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Indikatorennummerierung </th>
         <td>
           
-            
+            <p>11.2</p>
 
           
         </td>
@@ -1204,7 +1207,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Definitionen </th>
         <td>
           
-            
+            <p>Fortschreibung basierend auf Ergebnissen der Gebäude- und Wohnungszählungen (1987, 2011; Stand zum 31.12. des Jahres) <br /> a) Wohngebäude = Veränderung zum Vorjahr % <br /> b) Wohnungen insgesamt = Veränderung zum Vorjahr % <br /> c) Räume insgesamt = Veränderung zum Vorjahr % <br /> d) Belegungsdichte = EW/Whg</p>
 
           
         </td>
@@ -1218,7 +1221,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Einheit </th>
         <td>
           
-            <p>Anzahl der Abholstellen</p>
+            <p>Prozent</p>
 
           
         </td>
@@ -1232,7 +1235,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Geographische Abdeckung </th>
         <td>
           
-            
+            <p>Land BW</p>
 
           
         </td>
@@ -1246,7 +1249,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Periodizität </th>
         <td>
           
-            
+            <p>Einjahresintervalle</p>
 
           
         </td>
@@ -1260,7 +1263,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Daten verfügbar seit </th>
         <td>
           
-            
+            <p>2004</p>
 
           
         </td>
@@ -1274,7 +1277,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Datenquellen </th>
         <td>
           
-            
+            <p>Statistisches Landesamt BW</p>
 
           
         </td>
@@ -1321,7 +1324,7 @@ data-event-label="Change to Global Metadata tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/139f457f65313baed3918176ef32d98945cf0297" target="_blank">
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/908ac7d2686de275e46920ba820859c1975b7720" target="_blank">
                 2022-11-15: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
@@ -1769,12 +1772,12 @@ data-event-label="Change to Global Metadata tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221115203853'></script>
+<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221115222822'></script>
 
 
     
     
-    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221115203853"></script><script>
+    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221115222822"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

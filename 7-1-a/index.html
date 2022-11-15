@@ -136,7 +136,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221115203853">
+        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221115222822">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -462,7 +462,9 @@ data-event-label="high"
 
 <div class="row" id="page-content">
     <div class="col-xs-12">
-        <p>Mit Unterstützung der Senatsverwaltung für Umwelt, Mobilität, Verbraucher- und Klimaschutz wird seit April 2019 die Einrichtung der Koordinierungsstelle für Umweltbildung vom Umwelt- und Naturschutzamt Treptow-Köpenick gefördert. Informationen über die Arbeit der Koordinierungsstelle sowie zu Umweltbildungsthemen im Bezirk finden sich <a href="https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/umwelt-und-naturschutzamt/naturschutz/artikel.1167809.php" target="_blank">hier</a>.</p>
+        <p>Die Reduktion des Endenergieverbrauchs und der daraus resultierenden Treibhausgas-Emissionen (THG-Emissionen) gehört zu den zentralen Maßnahmen zur Erreichung der gesetzten Klimaziele.
+Der Indikator Endenergieverbrauch bildet ab, in welchem Umfang tatsächlich Energie verbraucht wird. Als summarischer Indikator macht er nicht sichtbar, in welchen Bereichen der Energieverbrauch konkret zu- oder abnimmt. Eine Differenzierung nach den vier Bereichen Gewerbe, Handel, Dienstleistung sowie Industrie, Verkehr und private Haushalte gibt aber zumindest einen Hinweis, bei welchen Abnehmern sich der Energieverbrauch auf welche Weise entwickelt.
+Der Indikator setzt den Endenergieverbrauch jeweils ins Verhältnis zu den Nutzenden. Im Fall der Treibhausgas-Emissionen von Industrie, Gewerbe, Handel und Dienstleistung sind dies sinnvollerweise die sozialversicherungspflichtig Beschäftigten (SvB), im Falle von privaten Haushalten und im Verkehrsbereich sind es die Einwohnerinnen und Einwohner.</p>
 
     </div>
 </div>
@@ -487,16 +489,16 @@ data-event-label="high"
      id="indicatorData"
      data-indicatorid='indicator_7-1-a'
      data-id="7-1-a"
-     data-country="Australia"
-     data-charttitle="Anteil der Bevölkerung mit (a) Zugang zu sicherer Sanitärversorgung und (b) einem Handwaschbecken mit Seife und Wasser"
+     data-country="Land BW"
+     data-charttitle="global_indicators.7.1.a-title"
      data-charttitles="null"
-     data-measurementunit="Absolute Zahlen"
+     data-measurementunit="Prozent"
      data-xaxislabel=""
      data-showdata="true"
      data-graphtype="line"
      data-geocoderegex=""
      data-showmap=""
-     data-startvalues="null"
+     data-startvalues="[{&quot;field&quot;:&quot;Region&quot;,&quot;value&quot;:&quot;Enzkreis&quot;},{&quot;field&quot;:&quot;Region&quot;,&quot;value&quot;:&quot;Land BW&quot;}]"
      data-graphlimits="null"
      data-stackeddisaggregation=""
      data-graphannotations="null"
@@ -537,7 +539,7 @@ data-event-label="high"
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Anteil der Bevölkerung mit (a) Zugang zu sicherer Sanitärversorgung und (b) einem Handwaschbecken mit Seife und Wasser</caption>
+      <caption>global_indicators.7.1.a-title</caption>
       <thead>
         
         
@@ -582,8 +584,10 @@ data-event-label="high"
   <div id="datatableFooter">
     
     
+    <p>Geographische Abdeckung: Land BW</p>
     
-    <p>Einheit: Absolute Zahlen</p>
+    
+    <p>Einheit: Prozent</p>
     
     
   </div>
@@ -630,7 +634,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Anteil der Bevölkerung mit (a) Zugang zu sicherer Sanitärversorgung und (b) einem Handwaschbecken mit Seife und Wasser</h4>
+          <h4 id="chart-heading" class="chart-title">global_indicators.7.1.a-title</h4>
           <div id="chart" class="plot-container">
             
 <canvas
@@ -882,10 +886,13 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Land BW</dd>
+        
 
         
         <dt>Einheit:</dt>
-        <dd>Absolute Zahlen</dd>
+        <dd>Prozent</dd>
         
 
         
@@ -922,10 +929,13 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Land BW</dd>
+        
 
         
         <dt>Einheit:</dt>
-        <dd>Absolute Zahlen</dd>
+        <dd>Prozent</dd>
         
 
         
@@ -990,7 +1000,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Indikatorennummerierung </th>
         <td>
           
-            
+            <p>7.1.a</p>
 
           
         </td>
@@ -1018,7 +1028,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Definitionen </th>
         <td>
           
-            
+            <p>7.1.a Endenergieverbrauch Landratsamt <br /> 7.1.b Endenergieverbrauch Enzkreis <br /> 7.1.c Jährliche Endenergieeinsparung Landratsamt [kWh]</p>
 
           
         </td>
@@ -1032,7 +1042,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Einheit </th>
         <td>
           
-            <p>Absolute Zahlen</p>
+            <p>Prozent</p>
 
           
         </td>
@@ -1046,7 +1056,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Geographische Abdeckung </th>
         <td>
           
-            
+            <p>Land BW</p>
 
           
         </td>
@@ -1060,7 +1070,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Periodizität </th>
         <td>
           
-            
+            <p>Einjahresintervalle</p>
 
           
         </td>
@@ -1074,7 +1084,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Daten verfügbar seit </th>
         <td>
           
-            
+            <p>2018</p>
 
           
         </td>
@@ -1088,7 +1098,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Datenquellen </th>
         <td>
           
-            
+            <p>Energie- und CO2-Bilanz ES Konzepte</p>
 
           
         </td>
@@ -1135,7 +1145,7 @@ data-event-label="Change to Global Metadata tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/139f457f65313baed3918176ef32d98945cf0297" target="_blank">
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/908ac7d2686de275e46920ba820859c1975b7720" target="_blank">
                 2022-11-15: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
@@ -1200,7 +1210,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Indikatorennummerierung </th>
         <td>
           
-            
+            <p>7.1.a</p>
 
           
         </td>
@@ -1228,7 +1238,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Definitionen </th>
         <td>
           
-            
+            <p>7.1.a Endenergieverbrauch Landratsamt <br /> 7.1.b Endenergieverbrauch Enzkreis <br /> 7.1.c Jährliche Endenergieeinsparung Landratsamt [kWh]</p>
 
           
         </td>
@@ -1242,7 +1252,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Einheit </th>
         <td>
           
-            <p>Absolute Zahlen</p>
+            <p>Prozent</p>
 
           
         </td>
@@ -1256,7 +1266,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Geographische Abdeckung </th>
         <td>
           
-            
+            <p>Land BW</p>
 
           
         </td>
@@ -1270,7 +1280,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Periodizität </th>
         <td>
           
-            
+            <p>Einjahresintervalle</p>
 
           
         </td>
@@ -1284,7 +1294,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Daten verfügbar seit </th>
         <td>
           
-            
+            <p>2018</p>
 
           
         </td>
@@ -1298,7 +1308,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Datenquellen </th>
         <td>
           
-            
+            <p>Energie- und CO2-Bilanz ES Konzepte</p>
 
           
         </td>
@@ -1345,7 +1355,7 @@ data-event-label="Change to Global Metadata tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/139f457f65313baed3918176ef32d98945cf0297" target="_blank">
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/908ac7d2686de275e46920ba820859c1975b7720" target="_blank">
                 2022-11-15: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
@@ -1793,12 +1803,12 @@ data-event-label="Change to Global Metadata tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221115203853'></script>
+<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221115222822'></script>
 
 
     
     
-    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221115203853"></script><script>
+    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221115222822"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

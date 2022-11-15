@@ -136,7 +136,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221115203853">
+        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221115222822">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -460,6 +460,16 @@ data-event-label="high"
 </div>
 
 
+<div class="row" id="page-content">
+    <div class="col-xs-12">
+        <p>Als SchulabbrecherInnen gelten solche SchulabgängerInnen, die ihre Pflichtschulzeit beenden, ohne mindestens einen Hauptschulabschluss erworben zu haben.
+Ziel der Schulbildung ist es, Kinder und Jugendliche von ihrem Schuleintritt bis zu ihrem Abschluss zu begleiten und auf das Berufsleben vorzubereiten. Menschen ohne erfolgreichen Schul- und Berufsabschluss haben heute kaum Chancen auf dem ersten Arbeitsmarkt. Insbesondere sozial schwache und bildungsferne Familien sowie Familien mit Migrationshintergrund stehen hierbei im Fokus, da der Bildungserfolg stark von den sozioökonomischen Faktoren der Eltern abhängt.
+Die SchulabbrecherInnenquote liefert Hinweise zum Anteil der SchülerInnen, die keine Grund- und Sekundarschulbildung abschließen konnten. Bei der Interpretation muss berücksichtigt werden, dass der Indikator keine Hinweise auf die Gründe für den Schulabbruch liefert und die Qualität der schulischen Bildung daher nur indirekt messen kann.
+Zu beachten ist auch, dass Abschlüsse nach der Pflichtschulzeit noch nachgeholt werden können. Dieser Aspekt wird durch die Schulabbrecherquote nicht abgebildet.</p>
+
+    </div>
+</div>
+
 
     <style>
     section {
@@ -480,16 +490,16 @@ data-event-label="high"
      id="indicatorData"
      data-indicatorid='indicator_4-3'
      data-id="4-3"
-     data-country="Australia"
-     data-charttitle=""
+     data-country="Land BW"
+     data-charttitle="Schulabbrecherquote"
      data-charttitles="null"
-     data-measurementunit=""
+     data-measurementunit="Prozent"
      data-xaxislabel=""
      data-showdata="true"
      data-graphtype="line"
      data-geocoderegex=""
      data-showmap=""
-     data-startvalues="null"
+     data-startvalues="[{&quot;field&quot;:&quot;Region&quot;,&quot;value&quot;:&quot;Enzkreis&quot;},{&quot;field&quot;:&quot;Region&quot;,&quot;value&quot;:&quot;Land BW&quot;}]"
      data-graphlimits="null"
      data-stackeddisaggregation=""
      data-graphannotations="null"
@@ -530,7 +540,7 @@ data-event-label="high"
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption></caption>
+      <caption>Schulabbrecherquote</caption>
       <thead>
         
         
@@ -575,8 +585,10 @@ data-event-label="high"
   <div id="datatableFooter">
     
     
+    <p>Geographische Abdeckung: Land BW</p>
     
-    <p>Einheit: </p>
+    
+    <p>Einheit: Prozent</p>
     
     
   </div>
@@ -623,7 +635,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title"></h4>
+          <h4 id="chart-heading" class="chart-title">Schulabbrecherquote</h4>
           <div id="chart" class="plot-container">
             
 <canvas
@@ -875,7 +887,13 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Land BW</dd>
+        
 
+        
+        <dt>Einheit:</dt>
+        <dd>Prozent</dd>
         
 
         
@@ -912,7 +930,13 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Land BW</dd>
+        
 
+        
+        <dt>Einheit:</dt>
+        <dd>Prozent</dd>
         
 
         
@@ -977,7 +1001,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Indikatorennummerierung </th>
         <td>
           
-            
+            <p>4.3</p>
 
           
         </td>
@@ -1005,7 +1029,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Definitionen </th>
         <td>
           
-            
+            <p>(Anzahl der SchulabgängerInnen ohne Hauptschulabschluss) / (Anzahl der SchulabgängerInnen gesamt) * 100</p>
 
           
         </td>
@@ -1019,7 +1043,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Einheit </th>
         <td>
           
-            
+            <p>Prozent</p>
 
           
         </td>
@@ -1033,7 +1057,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Geographische Abdeckung </th>
         <td>
           
-            
+            <p>Land BW</p>
 
           
         </td>
@@ -1047,7 +1071,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Periodizität </th>
         <td>
           
-            
+            <p>Einjahresintervalle</p>
 
           
         </td>
@@ -1061,7 +1085,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Daten verfügbar seit </th>
         <td>
           
-            
+            <p>1983</p>
 
           
         </td>
@@ -1075,7 +1099,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Datenquellen </th>
         <td>
           
-            
+            <p>Statistisches Landesamt BW</p>
 
           
         </td>
@@ -1122,7 +1146,7 @@ data-event-label="Change to Global Metadata tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/139f457f65313baed3918176ef32d98945cf0297" target="_blank">
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/908ac7d2686de275e46920ba820859c1975b7720" target="_blank">
                 2022-11-15: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
@@ -1187,7 +1211,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Indikatorennummerierung </th>
         <td>
           
-            
+            <p>4.3</p>
 
           
         </td>
@@ -1215,7 +1239,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Definitionen </th>
         <td>
           
-            
+            <p>(Anzahl der SchulabgängerInnen ohne Hauptschulabschluss) / (Anzahl der SchulabgängerInnen gesamt) * 100</p>
 
           
         </td>
@@ -1229,7 +1253,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Einheit </th>
         <td>
           
-            
+            <p>Prozent</p>
 
           
         </td>
@@ -1243,7 +1267,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Geographische Abdeckung </th>
         <td>
           
-            
+            <p>Land BW</p>
 
           
         </td>
@@ -1257,7 +1281,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Periodizität </th>
         <td>
           
-            
+            <p>Einjahresintervalle</p>
 
           
         </td>
@@ -1271,7 +1295,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Daten verfügbar seit </th>
         <td>
           
-            
+            <p>1983</p>
 
           
         </td>
@@ -1285,7 +1309,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Datenquellen </th>
         <td>
           
-            
+            <p>Statistisches Landesamt BW</p>
 
           
         </td>
@@ -1332,7 +1356,7 @@ data-event-label="Change to Global Metadata tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/139f457f65313baed3918176ef32d98945cf0297" target="_blank">
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/908ac7d2686de275e46920ba820859c1975b7720" target="_blank">
                 2022-11-15: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
@@ -1780,12 +1804,12 @@ data-event-label="Change to Global Metadata tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221115203853'></script>
+<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221115222822'></script>
 
 
     
     
-    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221115203853"></script><script>
+    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221115222822"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
