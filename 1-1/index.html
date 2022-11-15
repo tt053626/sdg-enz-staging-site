@@ -136,7 +136,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221115181944">
+        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221115185856">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -552,8 +552,6 @@ Der SGB II-/SGB XII-Bezug wird berechnet als Anteil der LeistungsbezieherInnen n
 
   <div id="datatableFooter">
     
-    <p>Datenquelle: Bundesagentur für Arbeit, Statistisches Landesamt BW</p>
-    
     
     <p>Geographische Abdeckung: Land BW</p>
     
@@ -855,9 +853,6 @@ opensdg.chartConfigAlter(function(config, info) {
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Datenquelle:</dt>
-        <dd>Bundesagentur für Arbeit, Statistisches Landesamt BW</dd>
-        
 
         
         <dt>Geographische Abdeckung:</dt>
@@ -900,9 +895,6 @@ opensdg.chartConfigAlter(function(config, info) {
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
-        
-        <dt>Datenquelle:</dt>
-        <dd>Bundesagentur für Arbeit, Statistisches Landesamt BW</dd>
         
 
         
@@ -980,7 +972,6 @@ data-event-label="Change to Sources tab"
   
   
   
-  
       
       
       <tr>
@@ -1054,7 +1045,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">Organisation </th>
+        <th scope="row">Datenquellen </th>
         <td>
           
             <p>Bundesagentur für Arbeit, Statistisches Landesamt BW</p>
@@ -1104,7 +1095,7 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/2b204d7ae3a6912893b47cacb84aaf84b74ef0f8" target="_blank">
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/86f301ee3619b778542fc20254b2eadc91d0894a" target="_blank">
                 2022-11-15: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
@@ -1160,35 +1151,8 @@ data-event-label="Change to Sources tab"
          <table class="table">
   
   
-      
-      
-      <tr>
-        <th scope="row">metadata_fields.sdg_goal </th>
-        <td>
-          
-            <p>1</p>
-
-          
-        </td>
-        </tr>
-        
-      
   
   
-  
-      
-      
-      <tr>
-        <th scope="row">Indikatorenbezeichnung </th>
-        <td>
-          
-            <p>SGB II-/SGB XII-Bezug</p>
-
-          
-        </td>
-        </tr>
-        
-      
   
       
       
@@ -1207,10 +1171,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">metadata_fields.sdg_goal </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p>1</p>
+            <p>SGB II-/SGB XII-Bezug</p>
 
           
         </td>
@@ -1242,7 +1206,6 @@ data-event-label="Change to Sources tab"
 </table>
 
          <table class="table">
-  
   
   
   
@@ -1323,7 +1286,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">Organisation </th>
+        <th scope="row">Datenquellen </th>
         <td>
           
             <p>Bundesagentur für Arbeit, Statistisches Landesamt BW</p>
@@ -1373,7 +1336,7 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/2b204d7ae3a6912893b47cacb84aaf84b74ef0f8" target="_blank">
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/86f301ee3619b778542fc20254b2eadc91d0894a" target="_blank">
                 2022-11-15: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
@@ -1430,7 +1393,6 @@ data-event-label="Change to Sources tab"
     <div class="col-md-6">
       
       <table class="table">
-  
   
   
   
@@ -1871,12 +1833,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221115181944'></script>
+<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221115185856'></script>
 
 
     
     
-    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221115181944"></script><script>
+    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221115185856"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
