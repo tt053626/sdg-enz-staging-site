@@ -136,7 +136,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221115191251">
+        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221115194027">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1138,13 +1138,13 @@ data-event-label="Change to Global Metadata tab"
   
 </li>
 
-<li role="presentation" class="nav-item">
+<!-- <li role="presentation" class="nav-item">
   <a class="nav-link" data-toggle="tab" id="tab-sources" href="#sources" aria-controls="sources" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to Sources tab"
 >Datenquellen</a>
-</li>
+</li> -->
 
 
   
@@ -1171,7 +1171,33 @@ data-event-label="Change to Sources tab"
   
   
   
+      
+      
+      <tr>
+        <th scope="row">Indikatorennummerierung </th>
+        <td>
+          
+            
+
+          
+        </td>
+        </tr>
+        
+      
   
+      
+      
+      <tr>
+        <th scope="row">Indikatorenbezeichnung </th>
+        <td>
+          
+            <p>Erneuerbare Energien – Zubaurate (Enzkreis)</p>
+
+          
+        </td>
+        </tr>
+        
+      
   
       
       
@@ -1349,6 +1375,37 @@ data-event-label="Change to Sources tab"
             
             Im Folgenden werden die Metadaten zu den lokal verfügbaren Zeitreihen für Treptow-Köpenick zum jeweiligen Indikator bereitgestellt.
          </p>
+         <!-- <table class="table">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+ -->
          <table class="table">
   
   
@@ -1382,37 +1439,6 @@ data-event-label="Change to Sources tab"
         </tr>
         
       
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</table>
-
-         <table class="table">
-  
-  
-  
-  
-  
-  
   
       
       
@@ -1581,14 +1607,14 @@ data-event-label="Change to Sources tab"
     </article>
   </div>
 </div>
-<div role="tabpanel" class="tab-pane" id="sources">
+<!-- <div role="tabpanel" class="tab-pane" id="sources">
   <!-- Count the non-empty sources (up to 5) -->
 
 
 
 
 
-</div>
+</div> -->
 
   
   
@@ -1993,12 +2019,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221115191251'></script>
+<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221115194027'></script>
 
 
     
     
-    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221115191251"></script><script>
+    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221115194027"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
