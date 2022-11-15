@@ -136,7 +136,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221115202612">
+        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221115203853">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -497,7 +497,7 @@ Die amtliche Statistik Baden-Württemberg verfügt über eine konsistente, jähr
      data-graphtype="line"
      data-geocoderegex=""
      data-showmap=""
-     data-startvalues="null"
+     data-startvalues="[{&quot;field&quot;:&quot;Region&quot;,&quot;value&quot;:&quot;Enzkreis&quot;},{&quot;field&quot;:&quot;Region&quot;,&quot;value&quot;:&quot;Land BW&quot;}]"
      data-graphlimits="null"
      data-stackeddisaggregation=""
      data-graphannotations="null"
@@ -581,8 +581,6 @@ Die amtliche Statistik Baden-Württemberg verfügt über eine konsistente, jähr
   </div>
 
   <div id="datatableFooter">
-    
-    <p>Datenquelle: Bundesinstitut für Bau-, Stadt- und Raumforschung, Statistisches Landesamt BW</p>
     
     
     <p>Geographische Abdeckung: Land BW</p>
@@ -885,9 +883,6 @@ opensdg.chartConfigAlter(function(config, info) {
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Datenquelle:</dt>
-        <dd>Bundesinstitut für Bau-, Stadt- und Raumforschung, Statistisches Landesamt BW</dd>
-        
 
         
         <dt>Geographische Abdeckung:</dt>
@@ -930,9 +925,6 @@ opensdg.chartConfigAlter(function(config, info) {
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
-        
-        <dt>Datenquelle:</dt>
-        <dd>Bundesinstitut für Bau-, Stadt- und Raumforschung, Statistisches Landesamt BW</dd>
         
 
         
@@ -1007,7 +999,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Indikatorennummerierung </th>
         <td>
           
-            
+            <p>3.5</p>
 
           
         </td>
@@ -1035,7 +1027,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Definitionen </th>
         <td>
           
-            <p>a) Anzahl alkoholbedingter Krankenhausaufenthalte bei Jungen je 1.000 Einwohner (13 – 19 Jahre); b) Anzahl alkoholbedingter Krankenhausaufenthalte bei Mädchen je 1.000 Einwohnerinnen (13 – 19 Jahre)</p>
+            <p>a) Anzahl alkoholbedingter Krankenhausaufenthalte bei Jungen je 1.000 Einwohner (13 – 19 Jahre); <br /> b) Anzahl alkoholbedingter Krankenhausaufenthalte bei Mädchen je 1.000 Einwohnerinnen (13 – 19 Jahre)</p>
 
           
         </td>
@@ -1105,7 +1097,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Datenquellen </th>
         <td>
           
-            
+            <p>Bundesinstitut für Bau-, Stadt- und Raumforschung, Statistisches Landesamt BW</p>
 
           
         </td>
@@ -1152,7 +1144,7 @@ data-event-label="Change to Global Metadata tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/e097296f7f4e6470d9774add8a2616dc6a3584cb" target="_blank">
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/1c7fc6795b3f190ab5065a0a5d162f0cda90c6db" target="_blank">
                 2022-11-15: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
@@ -1217,7 +1209,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Indikatorennummerierung </th>
         <td>
           
-            
+            <p>3.5</p>
 
           
         </td>
@@ -1245,7 +1237,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Definitionen </th>
         <td>
           
-            <p>a) Anzahl alkoholbedingter Krankenhausaufenthalte bei Jungen je 1.000 Einwohner (13 – 19 Jahre); b) Anzahl alkoholbedingter Krankenhausaufenthalte bei Mädchen je 1.000 Einwohnerinnen (13 – 19 Jahre)</p>
+            <p>a) Anzahl alkoholbedingter Krankenhausaufenthalte bei Jungen je 1.000 Einwohner (13 – 19 Jahre); <br /> b) Anzahl alkoholbedingter Krankenhausaufenthalte bei Mädchen je 1.000 Einwohnerinnen (13 – 19 Jahre)</p>
 
           
         </td>
@@ -1315,7 +1307,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Datenquellen </th>
         <td>
           
-            
+            <p>Bundesinstitut für Bau-, Stadt- und Raumforschung, Statistisches Landesamt BW</p>
 
           
         </td>
@@ -1362,7 +1354,7 @@ data-event-label="Change to Global Metadata tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/e097296f7f4e6470d9774add8a2616dc6a3584cb" target="_blank">
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/1c7fc6795b3f190ab5065a0a5d162f0cda90c6db" target="_blank">
                 2022-11-15: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
@@ -1810,12 +1802,12 @@ data-event-label="Change to Global Metadata tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221115202612'></script>
+<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221115203853'></script>
 
 
     
     
-    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221115202612"></script><script>
+    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221115203853"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
