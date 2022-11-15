@@ -136,7 +136,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221115021839">
+        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221115165205">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -404,7 +404,7 @@ data-event-label="high"
                   </a>
                 </div>
                 <div class="col col-lg-2 pull-right">
-                  <a href="/sdg-enz-staging-site/2-2-1" class="btn btn-primary btn-block goal-2 navigation-btn btn-right" role="button">
+                  <a href="/sdg-enz-staging-site/2-2" class="btn btn-primary btn-block goal-2 navigation-btn btn-right" role="button">
                     <i class="fa fa-chevron-right" aria-hidden="true" style="font-size: 45px;"></i><span id="next-link" class="hidden-sm hidden-xs"></span>
                   </a>
                 </div>
@@ -460,6 +460,19 @@ data-event-label="high"
 </div>
 
 
+<div class="row" id="page-content">
+    <div class="col-xs-12">
+        <p>Der Indikator „Kinder mit Fehlernährung“ gibt den Anteil aller Kinder an, deren Body Mass Index [BMI] über oder unterhalb eines Schwellenwerts liegt. Dieser Schwellenwert wird bestimmt als der Wert, unter dem 90 % aller Kinder desselben Geschlechts in der Altersgruppe in Deutschland liegen. Der BMI berechnet sich nach: (Gewicht [kg] / (Größe [m²]).
+Der Indikator bildet ab, inwieweit alle Formen der Fehlernährung, hier insbesondere die Über- oder Mangelernährung, beendet und der Zugang zu sicheren und nahrhaften Lebensmitteln gewährleistet werden kann.
+In Deutschland zeichnen sich neue Herausforderungen im Zusammenhang mit der Ernährung ab, wie beispielsweise die zunehmende Fettleibigkeit. Übergewicht kann das Risiko für spätere Folgeerkrankungen, wie z. B. Bluthochdruck, Erkrankungen der Gefäße oder Diabetes mellitus Typ II, erhöhen.
+Speziell für Kinder kann Übergewicht und insbesondere starkes Übergewicht eine Einschränkung in der sozialen Entwicklung bedeuten. Dagegen kann kindliches Untergewicht, das nicht mit altersgerecht unauffälligem Ernährungsverhalten und körperlicher Belastbarkeit einhergeht, gesundheitliche Probleme, wie z.B. Infektanfälligkeit oder auch psychosoziale Schwierigkeiten, hervorrufen.
+Ernährungsgewohnheiten und –trends, wie beispielsweise der übermäßige Verzehr von Fast-Food, Superfood oder der Verzicht auf tierische Produkte, ist in erster Linie eine Frage der Sozialisation durch das Elternhaus.
+Grundsätzlich ist es das Ziel, den Anteil der Kinder- und Jugendlichen mit Über- oder Untergewicht zu senken. Durch die gesetzlich verpflichtende Einschulungsuntersuchung, bei der jährlich ein gesamter Jahrgang von 4- bis 5-Jährigen untersucht wird (u.a. werden Körpergröße und –gewicht erfasst), kann auf valide und konsistente Datenreihen zurückgegriffen werden.
+Die Daten liegen im Enzkreis für Kinder in der Altersgruppe der etwa 5-Jährigen (Übergang zur Grundschule) vor und werden im Rahmen der jährlichen Schuleingangsuntersuchung erhoben (durch die Corona-Pandemie nicht im Jahr 2020).</p>
+
+    </div>
+</div>
+
 
     <style>
     section {
@@ -486,12 +499,12 @@ data-event-label="high"
      data-measurementunit="Prozent"
      data-xaxislabel=""
      data-showdata="true"
-     data-graphtype="bar"
+     data-graphtype="line"
      data-geocoderegex=""
      data-showmap=""
      data-startvalues="null"
      data-graphlimits="null"
-     data-stackeddisaggregation="Gruppe"
+     data-stackeddisaggregation=""
      data-graphannotations="null"
      data-graphtargetlines="null"
      data-graphseriesbreaks="null"
@@ -542,7 +555,7 @@ data-event-label="high"
 
   <div id="datatableFooter">
     
-    <p>Datenquelle: eigene Ergebung im Fachamt</p>
+    <p>Datenquelle: Gesundheitsamt (Enzkreis und Stadt Pforzheim)</p>
     
     
     <p>Geographische Abdeckung: Land BW</p>
@@ -799,32 +812,39 @@ opensdg.chartConfigAlter(function(config, info) {
 </script>
 
 <script>
+// For line charts, add the vertical line hover functionality.
 opensdg.chartConfigAlter(function(config, info) {
-  if (info.stackedDisaggregation) {
     var overrides = {
-      options: {
-        scales: {
-          xAxes: [{ stacked: true }],
-          yAxes: [{ stacked: true }],
-        }
-      }
+        options: {
+            tooltips: {
+                intersect: false,
+                axis: 'x'
+            },
+        },
+        plugins: [{
+            beforeDatasetsDraw: function(chart) {
+                if (chart.tooltip._active && chart.tooltip._active.length) {
+                    var activePoint = chart.tooltip._active[0],
+                        ctx = chart.ctx,
+                        x = activePoint.tooltipPosition().x,
+                        topY = chart.scales['y-axis-0'].top,
+                        bottomY = chart.scales['y-axis-0'].bottom;
+
+                    // draw line
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.moveTo(x, topY);
+                    ctx.lineTo(x, bottomY);
+                    ctx.lineWidth = 2;
+                    ctx.strokeStyle = '#757575';
+                    ctx.stroke();
+                    ctx.restore();
+                }
+            }
+        }],
     };
-    // If we have stackedDisaggregation, we need to group datasets into stacks.
-    config.data.datasets.forEach(function(dataset) {
-      var disaggregation = $.extend({}, dataset.disaggregation);
-      // We're going to "stringify" each combination of disaggregations in order
-      // to place them in their own "stacks". To place "stacked" disaggregations
-      // into the same stack, we set them as "samestack" before stringifying.
-      // Note that the string "samestack" is completely arbitrary.
-      if (typeof disaggregation[info.stackedDisaggregation] !== 'undefined') {
-        disaggregation[info.stackedDisaggregation] = 'samestack';
-      }
-      // Use the disaggregation as a unique id for each stack.
-      dataset.stack = JSON.stringify(disaggregation);
-    });
     // Add these overrides onto the normal config, and return it.
     $.extend(true, config, overrides);
-  }
 });
 </script>
 
@@ -839,7 +859,7 @@ opensdg.chartConfigAlter(function(config, info) {
     <dl>
         
         <dt>Datenquelle:</dt>
-        <dd>eigene Ergebung im Fachamt</dd>
+        <dd>Gesundheitsamt (Enzkreis und Stadt Pforzheim)</dd>
         
 
         
@@ -885,7 +905,7 @@ opensdg.chartConfigAlter(function(config, info) {
     <dl>
         
         <dt>Datenquelle:</dt>
-        <dd>eigene Ergebung im Fachamt</dd>
+        <dd>Gesundheitsamt (Enzkreis und Stadt Pforzheim)</dd>
         
 
         
@@ -1142,8 +1162,8 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/b1e6794b7b5a0fc02b1beff035ba04fd4526705a" target="_blank">
-                2022-11-07: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/139f457f65313baed3918176ef32d98945cf0297" target="_blank">
+                2022-11-15: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
 
@@ -1440,8 +1460,8 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/b1e6794b7b5a0fc02b1beff035ba04fd4526705a" target="_blank">
-                2022-11-07: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/139f457f65313baed3918176ef32d98945cf0297" target="_blank">
+                2022-11-15: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
 
@@ -1725,7 +1745,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Organisation </th>
         <td>
           
-            <p>eigene Ergebung im Fachamt</p>
+            <p>Gesundheitsamt (Enzkreis und Stadt Pforzheim)</p>
 
           
         </td>
@@ -1753,7 +1773,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Daten verfügbar seit </th>
         <td>
           
-            
+            <p>2006</p>
 
           
         </td>
@@ -2339,12 +2359,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221115021839'></script>
+<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221115165205'></script>
 
 
     
     
-    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221115021839"></script><script>
+    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221115165205"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
