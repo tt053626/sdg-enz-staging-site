@@ -136,7 +136,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221116021924">
+        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221116093738">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -462,10 +462,10 @@ data-event-label="high"
 
 <div class="row" id="page-content">
     <div class="col-xs-12">
-        <p> Der Indikator bildet den Stand der Zertifizierung des Bezirks Treptow-Köpenick als Fairtrade-Town ab. <br />
-Keine Bewerbung abgegeben: 0 <br />
-Bewerbung abgegeben: 0.5 <br />
-Zertifikat zum ersten bis x-ten Mal vergeben: 1 bis x  </p>
+        <p>Mit der WIN-Charta bietet Baden-Württemberg als einziges Bundesland ein System an, das vor allem kleinen und mittleren Unternehmen, aber auch Weltkonzernen ein gut umsetzbares und transparentes Nachhaltigkeitsmanagement ermöglicht.
+Zwölf Leitsätze bilden die Grundlage der WIN-Charta. Inhaltlich decken diese die drei Dimensionen der Nachhaltigkeit ab: Ökonomie, Ökologie und Soziales. Die Leitsätze stehen zudem für gemeinsame Grundwerte und bieten Orientierungspunkte für die Umsetzung im regionalen und lokalen Kontext.
+Mit der Unterzeichnung der WIN-Charta verpflichten sich die Unternehmen zu einem regelmäßigen schriftlichen Nachhaltigkeitsbericht. Dank dieser jährlich zu veröffentlichenden Berichte haben die WIN-Charta-Mitglieder die Möglichkeit, ihr nachhaltiges Engagement glaubwürdig nach außen zu kommunizieren. So kann ein direkter Dialog zwischen Unternehmen und Stakeholdern befördert werden.
+Der Indikator beschreibt die Anzahl der Akteure, die sich für die WIN-Charta engagieren. Dabei werden Unternehmen erfasst, welche die WIN-Charta als Unterzeichner unterstützen, einem Zielkonzept entlang der zwölf Leitsätze folgen und eine transparente (Nachhaltigkeits-)Berichterstattung gewährleisten.</p>
 
     </div>
 </div>
@@ -490,16 +490,16 @@ Zertifikat zum ersten bis x-ten Mal vergeben: 1 bis x  </p>
      id="indicatorData"
      data-indicatorid='indicator_12-3'
      data-id="12-3"
-     data-country="Australia"
-     data-charttitle="Index zu globalen Nahrungsmittelverlusten"
+     data-country="Land BW"
+     data-charttitle="Unterstützer der WIN-Charta des Landes Baden-Württemberg"
      data-charttitles="null"
-     data-measurementunit="Stand der Zertifizierung"
+     data-measurementunit="absolut"
      data-xaxislabel=""
      data-showdata="true"
      data-graphtype="line"
      data-geocoderegex=""
      data-showmap=""
-     data-startvalues="null"
+     data-startvalues="[{&quot;field&quot;:&quot;Region&quot;,&quot;value&quot;:&quot;Enzkreis&quot;},{&quot;field&quot;:&quot;Region&quot;,&quot;value&quot;:&quot;Land BW&quot;}]"
      data-graphlimits="null"
      data-stackeddisaggregation=""
      data-graphannotations="null"
@@ -540,7 +540,7 @@ Zertifikat zum ersten bis x-ten Mal vergeben: 1 bis x  </p>
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Index zu globalen Nahrungsmittelverlusten</caption>
+      <caption>Unterstützer der WIN-Charta des Landes Baden-Württemberg</caption>
       <thead>
         
         
@@ -621,8 +621,10 @@ Zertifikat zum ersten bis x-ten Mal vergeben: 1 bis x  </p>
   <div id="datatableFooter">
     
     
+    <p>Geographische Abdeckung: Land BW</p>
     
-    <p>Einheit: Stand der Zertifizierung</p>
+    
+    <p>Einheit: absolut</p>
     
     
   </div>
@@ -669,7 +671,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Index zu globalen Nahrungsmittelverlusten</h4>
+          <h4 id="chart-heading" class="chart-title">Unterstützer der WIN-Charta des Landes Baden-Württemberg</h4>
           <div id="chart" class="plot-container">
             
 <canvas
@@ -921,10 +923,13 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Land BW</dd>
+        
 
         
         <dt>Einheit:</dt>
-        <dd>Stand der Zertifizierung</dd>
+        <dd>absolut</dd>
         
 
         
@@ -961,10 +966,13 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Land BW</dd>
+        
 
         
         <dt>Einheit:</dt>
-        <dd>Stand der Zertifizierung</dd>
+        <dd>absolut</dd>
         
 
         
@@ -1029,7 +1037,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Indikatorennummerierung </th>
         <td>
           
-            
+            <p>12.3</p>
 
           
         </td>
@@ -1057,7 +1065,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Definitionen </th>
         <td>
           
-            
+            <p>Anzahl der Akteure im Kreis, die sich für die Umsetzung der WIN-Charta engagieren</p>
 
           
         </td>
@@ -1071,7 +1079,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Einheit </th>
         <td>
           
-            <p>Stand der Zertifizierung</p>
+            <p>absolut</p>
 
           
         </td>
@@ -1085,7 +1093,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Geographische Abdeckung </th>
         <td>
           
-            
+            <p>Land BW</p>
 
           
         </td>
@@ -1099,7 +1107,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Periodizität </th>
         <td>
           
-            
+            <p>Jährliche Ergänzung auf www.nachhaltigkeitsstrategie.de</p>
 
           
         </td>
@@ -1127,7 +1135,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Datenquellen </th>
         <td>
           
-            
+            <p>Ministerium für Umwelt, Klima und Energiewirtschaft Baden-Württemberg</p>
 
           
         </td>
@@ -1174,8 +1182,8 @@ data-event-label="Change to Global Metadata tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/139f457f65313baed3918176ef32d98945cf0297" target="_blank">
-                2022-11-15: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/22658b46ba5ff34270cf7b24fc93d1c5d795c085" target="_blank">
+                2022-11-16: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
 
@@ -1239,7 +1247,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Indikatorennummerierung </th>
         <td>
           
-            
+            <p>12.3</p>
 
           
         </td>
@@ -1267,7 +1275,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Definitionen </th>
         <td>
           
-            
+            <p>Anzahl der Akteure im Kreis, die sich für die Umsetzung der WIN-Charta engagieren</p>
 
           
         </td>
@@ -1281,7 +1289,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Einheit </th>
         <td>
           
-            <p>Stand der Zertifizierung</p>
+            <p>absolut</p>
 
           
         </td>
@@ -1295,7 +1303,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Geographische Abdeckung </th>
         <td>
           
-            
+            <p>Land BW</p>
 
           
         </td>
@@ -1309,7 +1317,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Periodizität </th>
         <td>
           
-            
+            <p>Jährliche Ergänzung auf www.nachhaltigkeitsstrategie.de</p>
 
           
         </td>
@@ -1337,7 +1345,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Datenquellen </th>
         <td>
           
-            
+            <p>Ministerium für Umwelt, Klima und Energiewirtschaft Baden-Württemberg</p>
 
           
         </td>
@@ -1384,8 +1392,8 @@ data-event-label="Change to Global Metadata tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/139f457f65313baed3918176ef32d98945cf0297" target="_blank">
-                2022-11-15: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/22658b46ba5ff34270cf7b24fc93d1c5d795c085" target="_blank">
+                2022-11-16: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
 
@@ -1832,12 +1840,12 @@ data-event-label="Change to Global Metadata tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221116021924'></script>
+<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221116093738'></script>
 
 
     
     
-    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221116021924"></script><script>
+    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221116093738"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

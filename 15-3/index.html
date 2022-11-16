@@ -136,7 +136,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221116021924">
+        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221116093738">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -462,7 +462,7 @@ data-event-label="high"
 
 <div class="row" id="page-content">
     <div class="col-xs-12">
-        <p>Der Indikator zeigt die Naturschutzgebiete und Landschaftsschutzgebiete im Bezirk Treptow-Köpenick.</p>
+        <p>Die Versiegelung von Flächen und die Intensivierung der Landnutzung führen zu einer Abnahme der naturnahen Flächen. Seit 1750 hat die anthropogene Landnutzung um etwa 50 % zugenommen, wodurch sich die natürlichen Lebensräume stark verändert haben. Aufgrund des heute hohen Bedarfs an Energie, Wasser und Nahrung haben sich beispielsweise Stadt-, Acker- und Weideflächen auf Kosten der Biodiversität und der natürlichen Vegetation ausgeweitet. Die Hemerobie (griechisch, hémeros, „gezähmt, kultiviert“; bíos, „leben“) bildet die Gesamtheit aller Eingriffe des Menschen in den Naturhaushalt und kann als ein Maß der Naturnähe verstanden werden, die die Möglichkeit der Umkehr menschlicher Eingriffe voraussetzt. Die Bestimmung der Hemerobie eines Landschaftsausschnittes wird an Parametern wie Nähe der Vegetation zur potenziellen natürlichen Vegetation (pnV), dem Grad der Bodenversiegelung und -verdichtung, dem Grad der Veränderung der Humusform und des Mikroklimas, dem Einsatz von Dünge- und Pflanzenschutzmitteln, Neophytenanteil, der Wasserqualität und Verbauung von Gewässern bemessen. Die Reduktion des anthropogenen Ökosystem- und Natureingriffs ist notwendig, um den unwiederbringlichen Verlust von Arten zu verhindern.</p>
 
     </div>
 </div>
@@ -487,16 +487,16 @@ data-event-label="high"
      id="indicatorData"
      data-indicatorid='indicator_15-3'
      data-id="15-3"
-     data-country="Australia"
-     data-charttitle="Anteil der Fläche, die von Bodendegradation betroffenen ist, an der gesamten Landfläche"
+     data-country="Land bW"
+     data-charttitle="Landschaftsqualität (Hemerobie-Index)"
      data-charttitles="null"
-     data-measurementunit="Fläche in Hektar"
+     data-measurementunit="absolut"
      data-xaxislabel=""
      data-showdata="true"
      data-graphtype="line"
      data-geocoderegex=""
      data-showmap=""
-     data-startvalues="null"
+     data-startvalues="[{&quot;field&quot;:&quot;Region&quot;,&quot;value&quot;:&quot;Enzkreis&quot;},{&quot;field&quot;:&quot;Region&quot;,&quot;value&quot;:&quot;Land BW&quot;}]"
      data-graphlimits="null"
      data-stackeddisaggregation=""
      data-graphannotations="null"
@@ -537,7 +537,7 @@ data-event-label="high"
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Anteil der Fläche, die von Bodendegradation betroffenen ist, an der gesamten Landfläche</caption>
+      <caption>Landschaftsqualität (Hemerobie-Index)</caption>
       <thead>
         
       </thead>
@@ -550,8 +550,10 @@ data-event-label="high"
   <div id="datatableFooter">
     
     
+    <p>Geographische Abdeckung: Land bW</p>
     
-    <p>Einheit: Fläche in Hektar</p>
+    
+    <p>Einheit: absolut</p>
     
     
   </div>
@@ -598,7 +600,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Anteil der Fläche, die von Bodendegradation betroffenen ist, an der gesamten Landfläche</h4>
+          <h4 id="chart-heading" class="chart-title">Landschaftsqualität (Hemerobie-Index)</h4>
           <div id="chart" class="plot-container">
             
 <canvas
@@ -850,10 +852,13 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Land bW</dd>
+        
 
         
         <dt>Einheit:</dt>
-        <dd>Fläche in Hektar</dd>
+        <dd>absolut</dd>
         
 
         
@@ -890,10 +895,13 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Land bW</dd>
+        
 
         
         <dt>Einheit:</dt>
-        <dd>Fläche in Hektar</dd>
+        <dd>absolut</dd>
         
 
         
@@ -958,7 +966,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Indikatorennummerierung </th>
         <td>
           
-            
+            <p>15.3</p>
 
           
         </td>
@@ -986,7 +994,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Definitionen </th>
         <td>
           
-            
+            <p>Flächengewichteter Mittelwert der Hemerobie-Stufen aller Landnutzungen der Bezugsfläche BW <br /> Vergleich Status Quo Baden-Württemberg mit Mittelwert BRD</p>
 
           
         </td>
@@ -1000,7 +1008,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Einheit </th>
         <td>
           
-            <p>Fläche in Hektar</p>
+            <p>absolut</p>
 
           
         </td>
@@ -1014,7 +1022,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Geographische Abdeckung </th>
         <td>
           
-            
+            <p>Land bW</p>
 
           
         </td>
@@ -1042,7 +1050,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Daten verfügbar seit </th>
         <td>
           
-            
+            <p>2009</p>
 
           
         </td>
@@ -1056,7 +1064,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Datenquellen </th>
         <td>
           
-            
+            <p>Leibniz-Institut für ökologische Raumentwicklung e. V.</p>
 
           
         </td>
@@ -1103,8 +1111,8 @@ data-event-label="Change to Global Metadata tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/139f457f65313baed3918176ef32d98945cf0297" target="_blank">
-                2022-11-15: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/905c6f68a94888b4298e614634cd7ebdd57861e0" target="_blank">
+                2022-11-16: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
 
@@ -1168,7 +1176,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Indikatorennummerierung </th>
         <td>
           
-            
+            <p>15.3</p>
 
           
         </td>
@@ -1196,7 +1204,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Definitionen </th>
         <td>
           
-            
+            <p>Flächengewichteter Mittelwert der Hemerobie-Stufen aller Landnutzungen der Bezugsfläche BW <br /> Vergleich Status Quo Baden-Württemberg mit Mittelwert BRD</p>
 
           
         </td>
@@ -1210,7 +1218,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Einheit </th>
         <td>
           
-            <p>Fläche in Hektar</p>
+            <p>absolut</p>
 
           
         </td>
@@ -1224,7 +1232,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Geographische Abdeckung </th>
         <td>
           
-            
+            <p>Land bW</p>
 
           
         </td>
@@ -1252,7 +1260,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Daten verfügbar seit </th>
         <td>
           
-            
+            <p>2009</p>
 
           
         </td>
@@ -1266,7 +1274,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Datenquellen </th>
         <td>
           
-            
+            <p>Leibniz-Institut für ökologische Raumentwicklung e. V.</p>
 
           
         </td>
@@ -1313,8 +1321,8 @@ data-event-label="Change to Global Metadata tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/139f457f65313baed3918176ef32d98945cf0297" target="_blank">
-                2022-11-15: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/905c6f68a94888b4298e614634cd7ebdd57861e0" target="_blank">
+                2022-11-16: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
 
@@ -1761,12 +1769,12 @@ data-event-label="Change to Global Metadata tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221116021924'></script>
+<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221116093738'></script>
 
 
     
     
-    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221116021924"></script><script>
+    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221116093738"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

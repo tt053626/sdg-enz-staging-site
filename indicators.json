@@ -612,6 +612,14 @@
           "keywords": "",
           "href": "/sdg-enz-staging-site/11-8",
           "status": "complete"
+        },
+        {
+          "id": "11-8 copy",
+          "title": "global_indicators.11-8 copy-title",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-enz-staging-site/11-8 copy",
+          "status": "complete"
         }]
     }
   },
@@ -763,7 +771,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-enz-staging-site/15-1",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "15-2",
@@ -843,7 +851,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-enz-staging-site/17-1-a",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "17-1-b",

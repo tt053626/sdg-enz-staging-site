@@ -136,7 +136,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221116021924">
+        <link rel="stylesheet" href="/sdg-enz-staging-site/assets/css/style.css?v=20221116093738">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -399,7 +399,7 @@ data-event-label="high"
               
               <div class="previous-next-links row" style="margin-top: -30px">
                 <div class="col col-lg-2 pull-left">
-                  <a href="/sdg-enz-staging-site/11-8" class="btn btn-primary btn-block goal-12 navigation-btn btn-left" role="button">
+                  <a href="/sdg-enz-staging-site/11-8 copy" class="btn btn-primary btn-block goal-12 navigation-btn btn-left" role="button">
                     <i class="fa fa-chevron-left" aria-hidden="true" style="font-size: 45px;"></i> <span id="previous-link" class="hidden-sm hidden-xs"></span>
                   </a>
                 </div>
@@ -462,7 +462,9 @@ data-event-label="high"
 
 <div class="row" id="page-content">
     <div class="col-xs-12">
-        <p>Aktuell (Stand Januar 2022) haben noch keine Fortbildungen zu nachhaltiger und fairer Beschaffung stattgefunden</p>
+        <p>Trinkwasser ist eine der Schlüsselressourcen und der sparsame Umgang damit entsprechend wichtig. Der Verbrauch von Trinkwasser hängt sowohl von der privaten Nutzung als auch von der Wassernutzung im Wirtschaftssektor ab. Während der Trinkwasserverbrauch der Industrie separat erhoben wird, ist eine Trennung zwischen Privathaushalten und Kleingewerbe nicht möglich.
+Der Indikator Trinkwasserverbrauch wird berechnet als die durchschnittliche tägliche Trinkwasserabgabe an Privathaushalte und Kleingewerbe pro Einwohnerin und Einwohner [L/EW].
+Im Netz der Wasserversorgung entstehen Leitungsverluste, z.B. durch materielle und altersbedingte Mängel. Die Leitungsverluste können als Indikator für den baulichen Zustand des Leitungsnetzes der Wasserversorgung herangezogen werden. Leitungsverluste sind der Kostbarkeit der Ressource Wasser entsprechend nach Möglichkeit gering zu halten.</p>
 
     </div>
 </div>
@@ -487,16 +489,16 @@ data-event-label="high"
      id="indicatorData"
      data-indicatorid='indicator_12-1-a'
      data-id="12-1-a"
-     data-country="Australia"
-     data-charttitle="Anzahl der Staaten mit nationalen Aktionsplänen zu nachhaltigem Konsum und Produktion (SCP) oder SCP, die als Priorität oder Ziel in nationale Politik aufgenommen wurden"
+     data-country="Land BW"
+     data-charttitle="Trinkwasserabgabe – Verbrauch (Haushalte und Kleingewerbe)"
      data-charttitles="null"
-     data-measurementunit="Absolute Zahlen"
+     data-measurementunit="Prozent"
      data-xaxislabel=""
      data-showdata="true"
      data-graphtype="line"
      data-geocoderegex=""
      data-showmap=""
-     data-startvalues="null"
+     data-startvalues="[{&quot;field&quot;:&quot;Region&quot;,&quot;value&quot;:&quot;Enzkreis&quot;},{&quot;field&quot;:&quot;Region&quot;,&quot;value&quot;:&quot;Land BW&quot;}]"
      data-graphlimits="null"
      data-stackeddisaggregation=""
      data-graphannotations="null"
@@ -537,7 +539,7 @@ data-event-label="high"
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Anzahl der Staaten mit nationalen Aktionsplänen zu nachhaltigem Konsum und Produktion (SCP) oder SCP, die als Priorität oder Ziel in nationale Politik aufgenommen wurden</caption>
+      <caption>Trinkwasserabgabe – Verbrauch (Haushalte und Kleingewerbe)</caption>
       <thead>
         
         
@@ -582,8 +584,10 @@ data-event-label="high"
   <div id="datatableFooter">
     
     
+    <p>Geographische Abdeckung: Land BW</p>
     
-    <p>Einheit: Absolute Zahlen</p>
+    
+    <p>Einheit: Prozent</p>
     
     
   </div>
@@ -630,7 +634,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Anzahl der Staaten mit nationalen Aktionsplänen zu nachhaltigem Konsum und Produktion (SCP) oder SCP, die als Priorität oder Ziel in nationale Politik aufgenommen wurden</h4>
+          <h4 id="chart-heading" class="chart-title">Trinkwasserabgabe – Verbrauch (Haushalte und Kleingewerbe)</h4>
           <div id="chart" class="plot-container">
             
 <canvas
@@ -882,10 +886,13 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Land BW</dd>
+        
 
         
         <dt>Einheit:</dt>
-        <dd>Absolute Zahlen</dd>
+        <dd>Prozent</dd>
         
 
         
@@ -922,10 +929,13 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Land BW</dd>
+        
 
         
         <dt>Einheit:</dt>
-        <dd>Absolute Zahlen</dd>
+        <dd>Prozent</dd>
         
 
         
@@ -990,7 +1000,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Indikatorennummerierung </th>
         <td>
           
-            
+            <p>12.1</p>
 
           
         </td>
@@ -1018,7 +1028,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Definitionen </th>
         <td>
           
-            
+            <p>a) Trinkwasserverbrauch = (Jährliche Wasserabgabe [Haushalte und Kleingewerbe]) / (Anzahl Einwohnerinnen und Einwohner) * (Tage pro Jahr) <br /> b) Leitungsverluste = Leitungsverluste (Versorgungsnetz) / 1.000 m³ [/a]</p>
 
           
         </td>
@@ -1032,7 +1042,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Einheit </th>
         <td>
           
-            <p>Absolute Zahlen</p>
+            <p>Prozent</p>
 
           
         </td>
@@ -1046,7 +1056,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Geographische Abdeckung </th>
         <td>
           
-            
+            <p>Land BW</p>
 
           
         </td>
@@ -1060,7 +1070,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Periodizität </th>
         <td>
           
-            
+            <p>Einjahresintervalle (2004 - 2016 Dreijahresintervalle)</p>
 
           
         </td>
@@ -1074,7 +1084,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Daten verfügbar seit </th>
         <td>
           
-            
+            <p>2004</p>
 
           
         </td>
@@ -1088,7 +1098,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Datenquellen </th>
         <td>
           
-            
+            <p>Statistisches Landesamt BW</p>
 
           
         </td>
@@ -1135,8 +1145,8 @@ data-event-label="Change to Global Metadata tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/139f457f65313baed3918176ef32d98945cf0297" target="_blank">
-                2022-11-15: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/22658b46ba5ff34270cf7b24fc93d1c5d795c085" target="_blank">
+                2022-11-16: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
 
@@ -1200,7 +1210,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Indikatorennummerierung </th>
         <td>
           
-            
+            <p>12.1</p>
 
           
         </td>
@@ -1228,7 +1238,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Definitionen </th>
         <td>
           
-            
+            <p>a) Trinkwasserverbrauch = (Jährliche Wasserabgabe [Haushalte und Kleingewerbe]) / (Anzahl Einwohnerinnen und Einwohner) * (Tage pro Jahr) <br /> b) Leitungsverluste = Leitungsverluste (Versorgungsnetz) / 1.000 m³ [/a]</p>
 
           
         </td>
@@ -1242,7 +1252,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Einheit </th>
         <td>
           
-            <p>Absolute Zahlen</p>
+            <p>Prozent</p>
 
           
         </td>
@@ -1256,7 +1266,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Geographische Abdeckung </th>
         <td>
           
-            
+            <p>Land BW</p>
 
           
         </td>
@@ -1270,7 +1280,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Periodizität </th>
         <td>
           
-            
+            <p>Einjahresintervalle (2004 - 2016 Dreijahresintervalle)</p>
 
           
         </td>
@@ -1284,7 +1294,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Daten verfügbar seit </th>
         <td>
           
-            
+            <p>2004</p>
 
           
         </td>
@@ -1298,7 +1308,7 @@ data-event-label="Change to Global Metadata tab"
         <th scope="row">Datenquellen </th>
         <td>
           
-            
+            <p>Statistisches Landesamt BW</p>
 
           
         </td>
@@ -1345,8 +1355,8 @@ data-event-label="Change to Global Metadata tab"
             
 
             
-              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/139f457f65313baed3918176ef32d98945cf0297" target="_blank">
-                2022-11-15: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              <a href="https://github.com/tt053626/sdg-enz-staging-data/commit/22658b46ba5ff34270cf7b24fc93d1c5d795c085" target="_blank">
+                2022-11-16: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
 
@@ -1793,12 +1803,12 @@ data-event-label="Change to Global Metadata tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221116021924'></script>
+<script src='/sdg-enz-staging-site/assets/js/sdg.js?v=20221116093738'></script>
 
 
     
     
-    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221116021924"></script><script>
+    <script src="/sdg-enz-staging-site/assets/js/custom.js?v=20221116093738"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
