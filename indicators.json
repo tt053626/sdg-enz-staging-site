@@ -612,14 +612,6 @@
           "keywords": "",
           "href": "/sdg-enz-staging-site/11-8",
           "status": "complete"
-        },
-        {
-          "id": "11-8 copy",
-          "title": "global_indicators.11-8 copy-title",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/11-8 copy",
-          "status": "complete"
         }]
     }
   },
@@ -757,14 +749,6 @@
       "title": "Landökosysteme schützen, wiederherstellen und ihre nachhaltige Nutzung fördern, Wälder nachhaltig bewirtschaften, Wüstenbildung bekämpfen, Bodendegradation beenden und umkehren und dem Verlust der biologischen Vielfalt ein Ende setzen",
       "indicators": [
         
-        {
-          "id": "15-1-",
-          "title": "global_indicators.15-1--title",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-enz-staging-site/15-1-",
-          "status": "complete"
-        },
         {
           "id": "15-1",
           "title": "Naturschutzflächen",
