@@ -179,7 +179,7 @@ map_layers:
 # Recommend accessibility improvements.
 accessible_tabs: true
 accessible_charts: true
-graph_color_set: accessible
+graph_color_set: default
 
 # Specify any custom javascript files.
 custom_js:
